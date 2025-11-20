@@ -1,0 +1,15 @@
+name: student_grade_predictor
+channels:
+  - conda-forge
+dependencies:
+  - ipykernel
+  - vegafusion
+  - altair
+  - scikit-learn
+  - pandas
+  - python=3.11
+  - vegafusion-jupyter
+  - notebook
+  - requests
+  - jupyter
+  - jupyter_contrib_nbextensions
