@@ -6,7 +6,9 @@ This is a data analysis project for DSCI 522 (Data Science workflows); a course 
 
 ## About
 
-!!! pull from Summary section in report to populate and include dataset info
+!!! pull from Summary section in report to populate. Dataset info added below.
+
+The data set used in this project is the Student Performance dataset created by Paulo Cortez from the University of Minho, Portugal (Cortez and Silva 2008). It was sourced from the UCI Machine Learning Repository (Cortez 2014) and can be found here. The dataset contains information on 649 students from two Portuguese secondary schools, with data collected through school reports and questionnaires. Each row represents a student with 30 features including demographic information (age, sex, family size), educational background (parental education, past failures, study time), social factors (going out, romantic relationships, alcohol consumption), and school-related features (absences, extra support, desire for higher education). The dataset also includes grades from the first period (G1), second period (G2), and final grade (G3), with G3 serving as the target variable for prediction.
 
 ## Report
 
@@ -39,7 +41,9 @@ jupyter lab
 
 3.  Open `notebooks/student_grade_predictor.ipynb` in Jupyter Lab
 
-4.  Under the "Kernel" menu click "Restart Kernel and Run All Cells..." to execute analysis and generate the final report.
+4.  Under Switch Kernel, select "Python \[conda env:student_grade_predictor\]".
+
+5. Under the "Kernel" menu click "Restart Kernel and Run All Cells..." to execute analysis and generate the final report.
 
 ## Dependencies
 
