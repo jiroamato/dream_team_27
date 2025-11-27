@@ -1,0 +1,8 @@
+services:
+  student-grade-predictor-env:
+    image: jiroamato/student-grade-predictor:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    platform: linux/amd64
