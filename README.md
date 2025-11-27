@@ -16,9 +16,54 @@ The final report can be found in the notebooks [here](https://jiroamato.github.i
 
 ## Usage
 
-#### Initial Setup (one-time)
+## Method 1 - Running Analysis with Docker (Preferred)
+
+#### Prerequisites
+
+-   [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+
+#### Clone the Repository and Pull the Docker Image
+
+1.  Clone the repository:
+
+``` bash
+git clone https://github.com/jiroamato/student_grade_predictor.git
+cd student_grade_predictor
+```
+
+3.  Pull the Docker image:
+
+``` bash
+docker pull jiroamato/student-grade-predictor:latest
+```
+
+3.  Launch the container with Docker Compose:
+
+``` bash
+docker compose up
+```
+
+4.  Open the JupyterLab URL displayed in the terminal (starts with `http://127.0.0.1:8888/lab?token=...`)
+
+5.  Navigate to the `work` folder to access the project files
+
+6.  To stop the container, press `Ctrl+C` in the terminal or run:
+
+``` bash
+docker compose down
+```
+
+## Method 2 - Running Analysis using Environment files
+
+### Initial Setup (one-time)
 
 1.  Clone the repository and navigate to the project root directory
+
+``` bash
+git clone https://github.com/jiroamato/student_grade_predictor.git
+cd student_grade_predictor
+```
+
 2.  Create the conda environment:
 
 ``` bash
@@ -27,7 +72,7 @@ conda env create --file environment.yml
 
 Alternatively, use `conda-lock` for a faster installation:
 
-```bash
+``` bash
 conda-lock install --name student-grade-predictor conda-lock.yml
 ```
 
@@ -47,17 +92,48 @@ jupyter lab
 
 3.  Open `notebooks/student_grade_predictor_report.ipynb` in Jupyter Lab
 
-4.  Under Switch Kernel, select "Python [conda env:student_grade_predictor]".
+4.  Under Switch Kernel, select "Python \[conda env:student_grade_predictor\]".
 
-5. Under the "Kernel" menu click "Restart Kernel and Run All Cells..." to execute analysis and generate the final report.
+5.  Under the "Kernel" menu click "Restart Kernel and Run All Cells..." to execute analysis and generate the final report.
 
-## Dependencies
+## Developer Notes
+
+### Dependencies
 
 -   `conda` (version 23.9.0 or higher)
 -   `conda-lock` (version 3.0.4 or higher)
 -   `jupyterlab` (version 4.0.0 or higher)
 -   `nb_conda_kernels` (version 2.3.1 or higher)
 -   Python and packages listed in [`environment.yml`](environment.yml)
+
+### Updating the Docker Image
+
+If you modify `environment.yml`:
+
+1.  Regenerate the lock file:
+
+``` bash
+conda-lock -f environment.yml -p linux-64 -p osx-arm64 -p win-64
+```
+
+2.  Push the changes to trigger a new Docker build:
+
+``` bash
+git add conda-linux-64.lock
+git commit -m "Update conda-linux-64.lock"
+git push
+```
+
+3.  The GitHub Actions workflow will automatically build and push the new image.
+
+```         
+
+**Push branch and create PR:**
+```bash
+git add README.md
+git commit -m "Add Docker usage instructions to README"
+git push -u origin docs/readme-docker
+```
 
 ## License
 
