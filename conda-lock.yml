@@ -13,10 +13,10 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: 6b984c387cdb17a4d6b9c0f668110cf9951f7083d690ea468cea4787f6ca1800
-    osx-arm64: b22d5688eca79d79a5d026c5f9a498d44052967d1d666a92049bbef114cb1653
-    osx-64: 4e76a5807144393b45d470149420b969d4c13a8d62ac04e2d5276f78657892d5
-    win-64: 25b9957218acb29810e61e67e771eab74e32cf4c2e3b21c2ba81f2f698c3d2cd
+    linux-64: 7dec46b5948731c0e76a1a3c304adc44836430667acad5ceaea59fb960cd81d4
+    osx-arm64: dd579ba69796518f796506c1ca2b13b86ae5649812a6052176f22c37bf188399
+    osx-64: c8beac09f4e95da0b95d1030c37db1f19eacfcd768abd2924b6da3dd2504435f
+    win-64: 4d395f1692268e133550de56fc237a50eae8f79239723068888755d6a6bc9f72
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -2231,6 +2231,54 @@ package:
     sha256: 1c656a35800b7f57f7371605bc6507c8d3ad60fbaaec65876fce7f73df1fc8ac
   category: main
   optional: false
+- name: backcall
+  version: 0.2.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    python: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2
+  hash:
+    md5: 6006a6d08a3fa99268a2681c7fb55213
+    sha256: ee62d6434090c1327a48551734e06bd10e65a64ef7f3b6e68719500dab0e42b9
+  category: main
+  optional: false
+- name: backcall
+  version: 0.2.0
+  manager: conda
+  platform: osx-64
+  dependencies:
+    python: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2
+  hash:
+    md5: 6006a6d08a3fa99268a2681c7fb55213
+    sha256: ee62d6434090c1327a48551734e06bd10e65a64ef7f3b6e68719500dab0e42b9
+  category: main
+  optional: false
+- name: backcall
+  version: 0.2.0
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    python: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2
+  hash:
+    md5: 6006a6d08a3fa99268a2681c7fb55213
+    sha256: ee62d6434090c1327a48551734e06bd10e65a64ef7f3b6e68719500dab0e42b9
+  category: main
+  optional: false
+- name: backcall
+  version: 0.2.0
+  manager: conda
+  platform: win-64
+  dependencies:
+    python: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2
+  hash:
+    md5: 6006a6d08a3fa99268a2681c7fb55213
+    sha256: ee62d6434090c1327a48551734e06bd10e65a64ef7f3b6e68719500dab0e42b9
+  category: main
+  optional: false
 - name: backports
   version: '1.0'
   manager: conda
@@ -3175,78 +3223,6 @@ package:
   hash:
     md5: 20e32ced54300292aff690a69c5e7b97
     sha256: b9f577bddb033dba4533e851853924bfe7b7c1623d0697df382eef177308a917
-  category: main
-  optional: false
-- name: category_encoders
-  version: 2.9.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    numpy: '>=1.14.0'
-    pandas: '>=1.0.5'
-    patsy: '>=0.5.1'
-    python: ''
-    scikit-learn: '>=1.6.0'
-    scipy: '>=1.0.0'
-    statsmodels: '>=0.9.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/category_encoders-2.9.0-pyhcf101f3_0.conda
-  hash:
-    md5: ffa766c48c8f5103c539640b0b890d0a
-    sha256: c3da0536d6178bfe969078271cc8ece6538cec3157006f497a63da24bbb34780
-  category: main
-  optional: false
-- name: category_encoders
-  version: 2.9.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    numpy: '>=1.14.0'
-    pandas: '>=1.0.5'
-    patsy: '>=0.5.1'
-    python: ''
-    scikit-learn: '>=1.6.0'
-    scipy: '>=1.0.0'
-    statsmodels: '>=0.9.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/category_encoders-2.9.0-pyhcf101f3_0.conda
-  hash:
-    md5: ffa766c48c8f5103c539640b0b890d0a
-    sha256: c3da0536d6178bfe969078271cc8ece6538cec3157006f497a63da24bbb34780
-  category: main
-  optional: false
-- name: category_encoders
-  version: 2.9.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    numpy: '>=1.14.0'
-    pandas: '>=1.0.5'
-    patsy: '>=0.5.1'
-    python: ''
-    scikit-learn: '>=1.6.0'
-    scipy: '>=1.0.0'
-    statsmodels: '>=0.9.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/category_encoders-2.9.0-pyhcf101f3_0.conda
-  hash:
-    md5: ffa766c48c8f5103c539640b0b890d0a
-    sha256: c3da0536d6178bfe969078271cc8ece6538cec3157006f497a63da24bbb34780
-  category: main
-  optional: false
-- name: category_encoders
-  version: 2.9.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    numpy: '>=1.14.0'
-    pandas: '>=1.0.5'
-    patsy: '>=0.5.1'
-    python: ''
-    scikit-learn: '>=1.6.0'
-    scipy: '>=1.0.0'
-    statsmodels: '>=0.9.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/category_encoders-2.9.0-pyhcf101f3_0.conda
-  hash:
-    md5: ffa766c48c8f5103c539640b0b890d0a
-    sha256: c3da0536d6178bfe969078271cc8ece6538cec3157006f497a63da24bbb34780
   category: main
   optional: false
 - name: certifi
@@ -4421,54 +4397,6 @@ package:
     sha256: ee09ad7610c12c7008262d713416d0b58bf365bc38584dce48950025850bdf3f
   category: main
   optional: false
-- name: dataclasses
-  version: '0.8'
-  manager: conda
-  platform: linux-64
-  dependencies:
-    python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/dataclasses-0.8-pyhc8e2a94_3.tar.bz2
-  hash:
-    md5: a362b2124b06aad102e2ee4581acee7d
-    sha256: 63a83e62e0939bc1ab32de4ec736f6403084198c4639638b354a352113809c92
-  category: main
-  optional: false
-- name: dataclasses
-  version: '0.8'
-  manager: conda
-  platform: osx-64
-  dependencies:
-    python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/dataclasses-0.8-pyhc8e2a94_3.tar.bz2
-  hash:
-    md5: a362b2124b06aad102e2ee4581acee7d
-    sha256: 63a83e62e0939bc1ab32de4ec736f6403084198c4639638b354a352113809c92
-  category: main
-  optional: false
-- name: dataclasses
-  version: '0.8'
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/dataclasses-0.8-pyhc8e2a94_3.tar.bz2
-  hash:
-    md5: a362b2124b06aad102e2ee4581acee7d
-    sha256: 63a83e62e0939bc1ab32de4ec736f6403084198c4639638b354a352113809c92
-  category: main
-  optional: false
-- name: dataclasses
-  version: '0.8'
-  manager: conda
-  platform: win-64
-  dependencies:
-    python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/dataclasses-0.8-pyhc8e2a94_3.tar.bz2
-  hash:
-    md5: a362b2124b06aad102e2ee4581acee7d
-    sha256: 63a83e62e0939bc1ab32de4ec736f6403084198c4639638b354a352113809c92
-  category: main
-  optional: false
 - name: dbus
   version: 1.16.2
   manager: conda
@@ -4594,114 +4522,6 @@ package:
   hash:
     md5: 9ce473d1d1be1cc3810856a48b3fab32
     sha256: c17c6b9937c08ad63cb20a26f403a3234088e57d4455600974a0ce865cb14017
-  category: main
-  optional: false
-- name: deepchecks
-  version: 0.3.2
-  manager: conda
-  platform: linux-64
-  dependencies:
-    category_encoders: '>=2.3.0'
-    dataclasses: '>=0.6'
-    ipykernel: '>=5.3.0'
-    ipython: '>=5.5.0'
-    ipywidgets: '>=7.6.5'
-    jsonpickle: '>=2'
-    matplotlib-base: '>=3.2.2'
-    numpy: '>=1.19'
-    pandas: '>=1.1.5'
-    plotly: '>=5.5.0'
-    python: '>=3.6'
-    scikit-learn: '>=0.24.2'
-    scipy: '>=1.4.1'
-    statsmodels: '>=0.11.0'
-    tqdm: '>=4.62.3'
-    typing-extensions: '>=3.7.4.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/deepchecks-0.3.2-pyhd8ed1ab_0.tar.bz2
-  hash:
-    md5: 9b9c6c7ba35decc7331cf028a2a1a77c
-    sha256: fd681c89e85d6d4174e823f73c7cabbdd08d28b2eecf0e16accca78a976c6256
-  category: main
-  optional: false
-- name: deepchecks
-  version: 0.3.2
-  manager: conda
-  platform: osx-64
-  dependencies:
-    category_encoders: '>=2.3.0'
-    dataclasses: '>=0.6'
-    ipykernel: '>=5.3.0'
-    ipython: '>=5.5.0'
-    ipywidgets: '>=7.6.5'
-    jsonpickle: '>=2'
-    matplotlib-base: '>=3.2.2'
-    numpy: '>=1.19'
-    pandas: '>=1.1.5'
-    plotly: '>=5.5.0'
-    python: '>=3.6'
-    scikit-learn: '>=0.24.2'
-    scipy: '>=1.4.1'
-    statsmodels: '>=0.11.0'
-    tqdm: '>=4.62.3'
-    typing-extensions: '>=3.7.4.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/deepchecks-0.3.2-pyhd8ed1ab_0.tar.bz2
-  hash:
-    md5: 9b9c6c7ba35decc7331cf028a2a1a77c
-    sha256: fd681c89e85d6d4174e823f73c7cabbdd08d28b2eecf0e16accca78a976c6256
-  category: main
-  optional: false
-- name: deepchecks
-  version: 0.3.2
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    category_encoders: '>=2.3.0'
-    dataclasses: '>=0.6'
-    ipykernel: '>=5.3.0'
-    ipython: '>=5.5.0'
-    ipywidgets: '>=7.6.5'
-    jsonpickle: '>=2'
-    matplotlib-base: '>=3.2.2'
-    numpy: '>=1.19'
-    pandas: '>=1.1.5'
-    plotly: '>=5.5.0'
-    python: '>=3.6'
-    scikit-learn: '>=0.24.2'
-    scipy: '>=1.4.1'
-    statsmodels: '>=0.11.0'
-    tqdm: '>=4.62.3'
-    typing-extensions: '>=3.7.4.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/deepchecks-0.3.2-pyhd8ed1ab_0.tar.bz2
-  hash:
-    md5: 9b9c6c7ba35decc7331cf028a2a1a77c
-    sha256: fd681c89e85d6d4174e823f73c7cabbdd08d28b2eecf0e16accca78a976c6256
-  category: main
-  optional: false
-- name: deepchecks
-  version: 0.3.2
-  manager: conda
-  platform: win-64
-  dependencies:
-    category_encoders: '>=2.3.0'
-    dataclasses: '>=0.6'
-    ipykernel: '>=5.3.0'
-    ipython: '>=5.5.0'
-    ipywidgets: '>=7.6.5'
-    jsonpickle: '>=2'
-    matplotlib-base: '>=3.2.2'
-    numpy: '>=1.19'
-    pandas: '>=1.1.5'
-    plotly: '>=5.5.0'
-    python: '>=3.6'
-    scikit-learn: '>=0.24.2'
-    scipy: '>=1.4.1'
-    statsmodels: '>=0.11.0'
-    tqdm: '>=4.62.3'
-    typing-extensions: '>=3.7.4.3'
-  url: https://conda.anaconda.org/conda-forge/noarch/deepchecks-0.3.2-pyhd8ed1ab_0.tar.bz2
-  hash:
-    md5: 9b9c6c7ba35decc7331cf028a2a1a77c
-    sha256: fd681c89e85d6d4174e823f73c7cabbdd08d28b2eecf0e16accca78a976c6256
   category: main
   optional: false
 - name: defusedxml
@@ -7343,147 +7163,101 @@ package:
   category: main
   optional: false
 - name: ipython
-  version: 9.7.0
+  version: 8.12.2
   manager: conda
   platform: linux-64
   dependencies:
-    __unix: ''
-    decorator: '>=4.3.2'
-    ipython_pygments_lexers: '>=1.0.0'
-    jedi: '>=0.18.1'
-    matplotlib-inline: '>=0.1.5'
+    __linux: ''
+    backcall: ''
+    decorator: ''
+    jedi: '>=0.16'
+    matplotlib-inline: ''
     pexpect: '>4.3'
-    prompt-toolkit: '>=3.0.41,<3.1.0'
-    pygments: '>=2.11.0'
-    python: ''
-    stack_data: '>=0.6.0'
-    traitlets: '>=5.13.0'
-    typing_extensions: '>=4.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-9.7.0-pyh53cf698_0.conda
+    pickleshare: ''
+    prompt_toolkit: '>=3.0.30,<3.1.0,!=3.0.37'
+    pygments: '>=2.4.0'
+    python: '>=3.8'
+    stack_data: ''
+    traitlets: '>=5'
+    typing_extensions: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.2-pyh41d4057_0.conda
   hash:
-    md5: 2d6b86a2e11b8cb2f20a432158ef10b9
-    sha256: b27fb08b14d82e896f35fe5ce889665aabb075bd540f9761c838d1d09a3d9704
+    md5: acebfd89278ecac2a67b60b657e00d5c
+    sha256: 40ef6ecd03981587184ca1231165f1539eeea021622eb7b08727b7e00a3094c2
   category: main
   optional: false
 - name: ipython
-  version: 9.7.0
+  version: 8.12.2
   manager: conda
   platform: osx-64
   dependencies:
-    __unix: ''
-    decorator: '>=4.3.2'
-    ipython_pygments_lexers: '>=1.0.0'
-    jedi: '>=0.18.1'
-    matplotlib-inline: '>=0.1.5'
+    __osx: ''
+    appnope: ''
+    backcall: ''
+    decorator: ''
+    jedi: '>=0.16'
+    matplotlib-inline: ''
     pexpect: '>4.3'
-    prompt-toolkit: '>=3.0.41,<3.1.0'
-    pygments: '>=2.11.0'
-    python: ''
-    stack_data: '>=0.6.0'
-    traitlets: '>=5.13.0'
-    typing_extensions: '>=4.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-9.7.0-pyh53cf698_0.conda
+    pickleshare: ''
+    prompt_toolkit: '>=3.0.30,<3.1.0,!=3.0.37'
+    pygments: '>=2.4.0'
+    python: '>=3.8'
+    stack_data: ''
+    traitlets: '>=5'
+    typing_extensions: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.2-pyhd1c38e8_0.conda
   hash:
-    md5: 2d6b86a2e11b8cb2f20a432158ef10b9
-    sha256: b27fb08b14d82e896f35fe5ce889665aabb075bd540f9761c838d1d09a3d9704
+    md5: acc618532cbc899f5721cc96407b16cc
+    sha256: 4187d131e7487d0f2867e383df9b2c4a7e2bc90ee7ad5906913372f023af2ea5
   category: main
   optional: false
 - name: ipython
-  version: 9.7.0
+  version: 8.12.2
   manager: conda
   platform: osx-arm64
   dependencies:
-    __unix: ''
-    decorator: '>=4.3.2'
-    ipython_pygments_lexers: '>=1.0.0'
-    jedi: '>=0.18.1'
-    matplotlib-inline: '>=0.1.5'
+    __osx: ''
+    appnope: ''
+    backcall: ''
+    decorator: ''
+    jedi: '>=0.16'
+    matplotlib-inline: ''
     pexpect: '>4.3'
-    prompt-toolkit: '>=3.0.41,<3.1.0'
-    pygments: '>=2.11.0'
-    python: ''
-    stack_data: '>=0.6.0'
-    traitlets: '>=5.13.0'
-    typing_extensions: '>=4.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-9.7.0-pyh53cf698_0.conda
+    pickleshare: ''
+    prompt_toolkit: '>=3.0.30,<3.1.0,!=3.0.37'
+    pygments: '>=2.4.0'
+    python: '>=3.8'
+    stack_data: ''
+    traitlets: '>=5'
+    typing_extensions: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.2-pyhd1c38e8_0.conda
   hash:
-    md5: 2d6b86a2e11b8cb2f20a432158ef10b9
-    sha256: b27fb08b14d82e896f35fe5ce889665aabb075bd540f9761c838d1d09a3d9704
+    md5: acc618532cbc899f5721cc96407b16cc
+    sha256: 4187d131e7487d0f2867e383df9b2c4a7e2bc90ee7ad5906913372f023af2ea5
   category: main
   optional: false
 - name: ipython
-  version: 9.7.0
+  version: 8.12.2
   manager: conda
   platform: win-64
   dependencies:
     __win: ''
-    colorama: '>=0.4.4'
-    decorator: '>=4.3.2'
-    ipython_pygments_lexers: '>=1.0.0'
-    jedi: '>=0.18.1'
-    matplotlib-inline: '>=0.1.5'
-    prompt-toolkit: '>=3.0.41,<3.1.0'
-    pygments: '>=2.11.0'
-    python: ''
-    stack_data: '>=0.6.0'
-    traitlets: '>=5.13.0'
-    typing_extensions: '>=4.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython-9.7.0-pyhe2676ad_0.conda
+    backcall: ''
+    colorama: ''
+    decorator: ''
+    jedi: '>=0.16'
+    matplotlib-inline: ''
+    pickleshare: ''
+    prompt_toolkit: '>=3.0.30,<3.1.0,!=3.0.37'
+    pygments: '>=2.4.0'
+    python: '>=3.8'
+    stack_data: ''
+    traitlets: '>=5'
+    typing_extensions: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/ipython-8.12.2-pyh08f2357_0.conda
   hash:
-    md5: a1ac3cd378490356e0299d0ca95809d1
-    sha256: 3f48685fce2d2d75d24e9b18eba7d6d55f973d56cd4092064c98bb7f95a77dcc
-  category: main
-  optional: false
-- name: ipython_pygments_lexers
-  version: 1.1.1
-  manager: conda
-  platform: linux-64
-  dependencies:
-    pygments: ''
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython_pygments_lexers-1.1.1-pyhd8ed1ab_0.conda
-  hash:
-    md5: bd80ba060603cc228d9d81c257093119
-    sha256: 894682a42a7d659ae12878dbcb274516a7031bbea9104e92f8e88c1f2765a104
-  category: main
-  optional: false
-- name: ipython_pygments_lexers
-  version: 1.1.1
-  manager: conda
-  platform: osx-64
-  dependencies:
-    pygments: ''
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython_pygments_lexers-1.1.1-pyhd8ed1ab_0.conda
-  hash:
-    md5: bd80ba060603cc228d9d81c257093119
-    sha256: 894682a42a7d659ae12878dbcb274516a7031bbea9104e92f8e88c1f2765a104
-  category: main
-  optional: false
-- name: ipython_pygments_lexers
-  version: 1.1.1
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    pygments: ''
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython_pygments_lexers-1.1.1-pyhd8ed1ab_0.conda
-  hash:
-    md5: bd80ba060603cc228d9d81c257093119
-    sha256: 894682a42a7d659ae12878dbcb274516a7031bbea9104e92f8e88c1f2765a104
-  category: main
-  optional: false
-- name: ipython_pygments_lexers
-  version: 1.1.1
-  manager: conda
-  platform: win-64
-  dependencies:
-    pygments: ''
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipython_pygments_lexers-1.1.1-pyhd8ed1ab_0.conda
-  hash:
-    md5: bd80ba060603cc228d9d81c257093119
-    sha256: 894682a42a7d659ae12878dbcb274516a7031bbea9104e92f8e88c1f2765a104
+    md5: f289f9dc26526b8bd9f5845486f53a4d
+    sha256: ceae9864850ccc37ad8e60dde2f99241a9f4f3096afb5b4f9d8c8885b2f5525a
   category: main
   optional: false
 - name: ipywidgets
@@ -8028,54 +7802,6 @@ package:
   hash:
     md5: cb60ae9cf02b9fcb8004dec4089e5691
     sha256: 304955757d1fedbe344af43b12b5467cca072f83cce6109361ba942e186b3993
-  category: main
-  optional: false
-- name: jsonpickle
-  version: 4.1.1
-  manager: conda
-  platform: linux-64
-  dependencies:
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/jsonpickle-4.1.1-pyhe01879c_0.conda
-  hash:
-    md5: d03f35a99e458c6f2bd7ce03b56210d9
-    sha256: 63995b1a677c3faecbfe876801b9983b01dd2e9781e7d8006cda1ede9893c05b
-  category: main
-  optional: false
-- name: jsonpickle
-  version: 4.1.1
-  manager: conda
-  platform: osx-64
-  dependencies:
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/jsonpickle-4.1.1-pyhe01879c_0.conda
-  hash:
-    md5: d03f35a99e458c6f2bd7ce03b56210d9
-    sha256: 63995b1a677c3faecbfe876801b9983b01dd2e9781e7d8006cda1ede9893c05b
-  category: main
-  optional: false
-- name: jsonpickle
-  version: 4.1.1
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/jsonpickle-4.1.1-pyhe01879c_0.conda
-  hash:
-    md5: d03f35a99e458c6f2bd7ce03b56210d9
-    sha256: 63995b1a677c3faecbfe876801b9983b01dd2e9781e7d8006cda1ede9893c05b
-  category: main
-  optional: false
-- name: jsonpickle
-  version: 4.1.1
-  manager: conda
-  platform: win-64
-  dependencies:
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/jsonpickle-4.1.1-pyhe01879c_0.conda
-  hash:
-    md5: d03f35a99e458c6f2bd7ce03b56210d9
-    sha256: 63995b1a677c3faecbfe876801b9983b01dd2e9781e7d8006cda1ede9893c05b
   category: main
   optional: false
 - name: jsonpointer
@@ -10903,10 +10629,10 @@ package:
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
     _openmp_mutex: '>=4.5'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-15.2.0-he0feb66_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-15.2.0-he0feb66_14.conda
   hash:
-    md5: efdcbfd0069c808d48e6719f89c92e52
-    sha256: b405ccad7fc036e5570cb663dbee4f6db7fc3e8a023fe71918611380165657cd
+    md5: 550dceb769d23bcf0e2f97fd4062d720
+    sha256: 947bfbe5e47cd5d0cbdb0926d4baadb3e9be25caca7c6c6ef516f7ef85052cec
   category: main
   optional: false
 - name: libgcc
@@ -10915,10 +10641,10 @@ package:
   platform: osx-64
   dependencies:
     _openmp_mutex: ''
-  url: https://conda.anaconda.org/conda-forge/osx-64/libgcc-15.2.0-h08519bb_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/libgcc-15.2.0-h08519bb_14.conda
   hash:
-    md5: f763dc1bb85de2672ad049fbec68a92b
-    sha256: 023148ff0a922c3b17e2832ba708a85cfc01665c818b4d7d1d30153bbc4b5e33
+    md5: ad31de7df92caf04a70d0d8dc48d9ecd
+    sha256: e300407b7f24d320e1e16277949db9d10cc8577004f839fe21e195933f8e3028
   category: main
   optional: false
 - name: libgcc
@@ -10927,10 +10653,10 @@ package:
   platform: osx-arm64
   dependencies:
     _openmp_mutex: ''
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgcc-15.2.0-hcbb3090_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgcc-15.2.0-hcbb3090_14.conda
   hash:
-    md5: 0012f6dd3df042f08ba83ab1192e7dba
-    sha256: d4a1bf80c94af5ee1640291c60791f947e4ce3dc5bb25faa95b6f5d84d82c9af
+    md5: 1b3fb17dd26afdafe0bf30fafcb900a2
+    sha256: 6ff7172e6102ed87faa5478b9c828afd79aeca33e91038ab6b6bd6f8581e63f9
   category: main
   optional: false
 - name: libgcc
@@ -10940,10 +10666,10 @@ package:
   dependencies:
     _openmp_mutex: '>=4.5'
     libwinpthread: '>=12.0.0.r4.gg4f2fc60ca'
-  url: https://conda.anaconda.org/conda-forge/win-64/libgcc-15.2.0-h8ee18e1_13.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/libgcc-15.2.0-h8ee18e1_14.conda
   hash:
-    md5: a7c5d0f4e6797b47ac83135b7f675cab
-    sha256: fd05e7a82ea82643796ada8f799b0891e06f00645c4d669d0ea662b5f2632d91
+    md5: b39b17a9f5ec5f3a395dbf0f5ee13b66
+    sha256: 53faec88576b469e0800830f5da07072478398c3ed69a8ca2b96d41e7c45ec73
   category: main
   optional: false
 - name: libgcc-ng
@@ -10952,10 +10678,10 @@ package:
   platform: linux-64
   dependencies:
     libgcc: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-15.2.0-h69a702a_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-15.2.0-h69a702a_14.conda
   hash:
-    md5: f1a67aa7f282dbb755dc8a86246989d3
-    sha256: 8b4a7850c2976ea6e4924f99d042e6bc4b03b8a9cd46f17f6d3643a45ee8314d
+    md5: 6c13aaae36d7514f28bd5544da1a7bb8
+    sha256: 48a77fde940b4b877c0ed24efd562c135170a46d100c07cd2d7b67e842e30642
   category: main
   optional: false
 - name: libgd
@@ -11058,10 +10784,10 @@ package:
   platform: linux-64
   dependencies:
     libgfortran5: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgfortran-15.2.0-h69a702a_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgfortran-15.2.0-h69a702a_14.conda
   hash:
-    md5: 0d1067fda8911da519d7fc15bced6e3e
-    sha256: bf0a0698318561a0027af6fc2aede086799414952c84d43be5c2ac720658f247
+    md5: fa9d91abc5a9db36fa8dcd1b9a602e61
+    sha256: 8112c883156c256e26f15cba033b1b7c3de747bc3823497498d34b9fcd2187b6
   category: main
   optional: false
 - name: libgfortran
@@ -11070,10 +10796,10 @@ package:
   platform: osx-64
   dependencies:
     libgfortran5: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/osx-64/libgfortran-15.2.0-h7e5c614_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/libgfortran-15.2.0-h7e5c614_14.conda
   hash:
-    md5: d4724ff9aac86ab75bf6013351430478
-    sha256: 08d335d3f96a7e14769b38fca8f55cb5a774ac2c959b5d30d953b9339b0a974b
+    md5: c11e0acbe6ba3df9a30dbe7f839cbd99
+    sha256: 59d0eb2198e703949c4b59cffa5f7b8936447531bd96d69799b80441a4139418
   category: main
   optional: false
 - name: libgfortran
@@ -11082,10 +10808,10 @@ package:
   platform: osx-arm64
   dependencies:
     libgfortran5: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran-15.2.0-h07b0088_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran-15.2.0-h07b0088_14.conda
   hash:
-    md5: d8700700485e308645145affba149037
-    sha256: 5b04e35914daf17a398b60d626c62a8cfd8b5e2d65703e217cd0ba0a2e6cbfcd
+    md5: 3187356c87594c3ebc3b8c0bd72a7e9f
+    sha256: 1864a3639b46c625ecc6fe1acd0da8962e7db15d898576156147caa796b22fdd
   category: main
   optional: false
 - name: libgfortran5
@@ -11095,10 +10821,10 @@ package:
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
     libgcc: '>=15.2.0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-15.2.0-h68bc16d_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-15.2.0-h68bc16d_14.conda
   hash:
-    md5: f5cd1c419503abab5196946dd9e7d99c
-    sha256: 0f0b0f2b7a345eee5cdc7864a7794e196006b2b45d377a1ad2039afed054eb11
+    md5: 3078a2a9a58566a54e579b41b9e88c84
+    sha256: a32c45c9652dfd832fb860898f818fb34e6ad47933fcce24cf323bf0b6914f24
   category: main
   optional: false
 - name: libgfortran5
@@ -11107,10 +10833,10 @@ package:
   platform: osx-64
   dependencies:
     libgcc: '>=15.2.0'
-  url: https://conda.anaconda.org/conda-forge/osx-64/libgfortran5-15.2.0-hd16e46c_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/libgfortran5-15.2.0-hd16e46c_14.conda
   hash:
-    md5: 3ef49513ad37475b455c936f7531baa4
-    sha256: 78425b253aacda06cc5022558010fb3bdd8a00ed212b20e0a9948763ed444527
+    md5: 0f4173df0120daf2b2084a55960048e8
+    sha256: eb78e8270859ba927d11db2f4f0f05b8e83fca82ff039e4236a4cef97fda16ec
   category: main
   optional: false
 - name: libgfortran5
@@ -11119,10 +10845,10 @@ package:
   platform: osx-arm64
   dependencies:
     libgcc: '>=15.2.0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran5-15.2.0-hdae7583_13.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran5-15.2.0-hdae7583_14.conda
   hash:
-    md5: 6b9acc983fd417fa5a2e8f711c27553b
-    sha256: 4774022c467409886aa0b284b794bc38ed1d08163a43c49b33774d91aa120f10
+    md5: 4fa9de90ec33234997aed5871d20f14e
+    sha256: e40c74862b0f1496b1014472e13dc08a9d156f45a8d434f3513ba741fb03f052
   category: main
   optional: false
 - name: libgl
@@ -11270,10 +10996,10 @@ package:
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-15.2.0-he0feb66_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libgomp-15.2.0-he0feb66_14.conda
   hash:
-    md5: 5bbcaf03898d70f9592a7cd3d2ff7e28
-    sha256: cdb316241515da4e6dc1f452ba912ac479ee23cb823ef2b319b1de3e10b73e86
+    md5: 91349c276f84f590487e4c7f6e90e077
+    sha256: 2017cbc0f0f3b1d15df9ca681960eef015f9f58ba0d6e841694277a9f7eae0fc
   category: main
   optional: false
 - name: libgomp
@@ -11282,10 +11008,10 @@ package:
   platform: win-64
   dependencies:
     libwinpthread: '>=12.0.0.r4.gg4f2fc60ca'
-  url: https://conda.anaconda.org/conda-forge/win-64/libgomp-15.2.0-h8ee18e1_13.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/libgomp-15.2.0-h8ee18e1_14.conda
   hash:
-    md5: d5d63fc45f84f3101f137f4e69a85a63
-    sha256: 15aec6a14dd271f4dbfb2cd32e31da038f157e471a81d649650f7e10fa835111
+    md5: c21643058895b399fd413e6ba17f587f
+    sha256: 83fba01426c23fa20aefbfd05138b20df0b07cec51a72bd0a15868ce11443029
   category: main
   optional: false
 - name: libgoogle-cloud
@@ -12770,10 +12496,10 @@ package:
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
     libgcc: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_14.conda
   hash:
-    md5: b98186396f799a0c15d5171f39f8b151
-    sha256: f7c363c5ec37213d2eb490dd76d2acdfb765e41e9f4d9f0d785f3aaada28e039
+    md5: 8e96fe9b17d5871b5cf9d312cab832f6
+    sha256: bbeb7cf8b7eff000b2cb5ffb9a40d98fbb8f39c94768afaec38408c3097cde0d
   category: main
   optional: false
 - name: libstdcxx-ng
@@ -12782,10 +12508,10 @@ package:
   platform: linux-64
   dependencies:
     libstdcxx: 15.2.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-15.2.0-hdf11a46_13.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-15.2.0-hdf11a46_14.conda
   hash:
-    md5: 64638ce314654548491c21abde2ff8ad
-    sha256: 60e0b56a9e8e43efa40763765463d0ef7f634b1971be620a5dbce308a2de35a2
+    md5: 9531f671a13eec0597941fa19e489b96
+    sha256: 63336f51b88029a9557a430aecbb08a11365aa03ec47ec8d14e542fec5dc80fb
   category: main
   optional: false
 - name: libthrift
@@ -13609,69 +13335,69 @@ package:
   category: main
   optional: false
 - name: matplotlib
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: linux-64
   dependencies:
-    matplotlib-base: '>=3.10.8,<3.10.9.0a0'
+    matplotlib-base: '>=3.10.7,<3.10.8.0a0'
     pyside6: '>=6.7.2'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     tornado: '>=5'
-  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.10.8-py312h7900ff3_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.10.7-py312h7900ff3_0.conda
   hash:
-    md5: 2a7663896e5aab10b60833a768c4c272
-    sha256: 6d66175e1a4ffb91ed954e2c11066d2e03a05bce951a808275069836ddfc993e
+    md5: 71da16a72db3da61f5569da05fd1c750
+    sha256: a90b146dcaae011f97b85776dcd9751acf31db6206c9da7a867b2870a082c642
   category: main
   optional: false
 - name: matplotlib
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: osx-64
   dependencies:
-    matplotlib-base: '>=3.10.8,<3.10.9.0a0'
+    matplotlib-base: '>=3.10.7,<3.10.8.0a0'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     tornado: '>=5'
-  url: https://conda.anaconda.org/conda-forge/osx-64/matplotlib-3.10.8-py312hb401068_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/matplotlib-3.10.7-py312hb401068_0.conda
   hash:
-    md5: c2a15b38125fe68d31901e7fa63ca049
-    sha256: a42cff0706c6e4d43234b9dc366f9d9b99555cee5c259969978e8741faf335db
+    md5: 00721c0399429e5f7d7b293fa89c2625
+    sha256: c5fd2bf2e76616b55526ff7ec836d45527685b59fa198b848c03b28b8e4dc6ef
   category: main
   optional: false
 - name: matplotlib
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: osx-arm64
   dependencies:
-    matplotlib-base: '>=3.10.8,<3.10.9.0a0'
+    matplotlib-base: '>=3.10.7,<3.10.8.0a0'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     tornado: '>=5'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-3.10.8-py312h1f38498_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-3.10.7-py312h1f38498_0.conda
   hash:
-    md5: 534ed7eb4471c088285fdb382805e6ef
-    sha256: e3e8448b10273807bf1aa9b1aa6a4ee3a686ccfd0c296560b51b1d1581bb42ae
+    md5: e31c510b04a9dd1071b1ee0a9c977f60
+    sha256: 676e6eaf85b3482e39db1033e87c3c00b7dff32186b0574bf4aaf394554750f5
   category: main
   optional: false
 - name: matplotlib
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: win-64
   dependencies:
-    matplotlib-base: '>=3.10.8,<3.10.9.0a0'
+    matplotlib-base: '>=3.10.7,<3.10.8.0a0'
     pyside6: '>=6.7.2'
     python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     tornado: '>=5'
-  url: https://conda.anaconda.org/conda-forge/win-64/matplotlib-3.10.8-py312h2e8e312_0.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/matplotlib-3.10.7-py312h2e8e312_0.conda
   hash:
-    md5: f0302a2f16e674cf326cca5dc9cc47ee
-    sha256: f3910f3dfe31cc01b5bc8b13f053b1c11a719fd0ec0727d3bb512e32602710d9
+    md5: 7e0fd7fd2a87921eb3b2088b52c9abfe
+    sha256: 9b850c7aeaeae8c836b19e79497c2cf357cd9e0bb617df16c2c6b003936e6cce
   category: main
   optional: false
 - name: matplotlib-base
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: linux-64
   dependencies:
@@ -13694,14 +13420,14 @@ package:
     python_abi: 3.12.*
     qhull: '>=2020.2,<2020.3.0a0'
     tk: '>=8.6.13,<8.7.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.10.8-py312he3d6523_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.10.7-py312he3d6523_0.conda
   hash:
-    md5: b8dc157bbbb69c1407478feede8b7b42
-    sha256: 70cf0e7bfd50ef50eb712a6ca1eef0ef0d63b7884292acc81353327b434b548c
+    md5: 066291f807305cff71a8ec1683fc9958
+    sha256: a86bf43f40c8afa3dbe846c62e54dc7496493cc882acdf366b5197205e7709d8
   category: main
   optional: false
 - name: matplotlib-base
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: osx-64
   dependencies:
@@ -13722,14 +13448,14 @@ package:
     python-dateutil: '>=2.7'
     python_abi: 3.12.*
     qhull: '>=2020.2,<2020.3.0a0'
-  url: https://conda.anaconda.org/conda-forge/osx-64/matplotlib-base-3.10.8-py312h7894933_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/matplotlib-base-3.10.7-py312h7894933_0.conda
   hash:
-    md5: 853618b60fdd11a6c3dbaadaa413407c
-    sha256: 2ce31cad23d5d5fc16ca9d25f47dcfc52e93f2a0c6e1dc6db28e583c42f88bdc
+    md5: 8993a6404a2bd1d1b4ccc169c611c826
+    sha256: 890975012522122fb20a7914c11a02fd4973ed0ee470abc27bd3298ef6de37df
   category: main
   optional: false
 - name: matplotlib-base
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: osx-arm64
   dependencies:
@@ -13750,14 +13476,14 @@ package:
     python-dateutil: '>=2.7'
     python_abi: 3.12.*
     qhull: '>=2020.2,<2020.3.0a0'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-base-3.10.8-py312h605b88b_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-base-3.10.7-py312h605b88b_0.conda
   hash:
-    md5: fbc4f90b3d63ea4e6c30f7733a0b5bfd
-    sha256: 3c96c85dd723a4c16fce4446d1f0dc7d64e46b6ae4629c66d65984b8593ee999
+    md5: f4c14d3f89a1a892cab55771c798c6b2
+    sha256: 83e4f0e36cdeb610568f074afc12440cb95b84645f0f63a8f45dd51410fb98c8
   category: main
   optional: false
 - name: matplotlib-base
-  version: 3.10.8
+  version: 3.10.7
   manager: conda
   platform: win-64
   dependencies:
@@ -13779,10 +13505,10 @@ package:
     ucrt: '>=10.0.20348.0'
     vc: '>=14.3,<15'
     vc14_runtime: '>=14.44.35208'
-  url: https://conda.anaconda.org/conda-forge/win-64/matplotlib-base-3.10.8-py312h0ebf65c_0.conda
+  url: https://conda.anaconda.org/conda-forge/win-64/matplotlib-base-3.10.7-py312h0ebf65c_0.conda
   hash:
-    md5: 46f73e68304eb61df083379b044e9eb9
-    sha256: a0b6f97f562ec803483b8c222788a4364aafd47c4023e8529ebbb4f017477a86
+    md5: 79230f2289ae81063289d3e726150912
+    sha256: 7a48d0f7acf2c6f659d4110c51fd6349eea59cf094736c0487d146b279ffc8a5
   category: main
   optional: false
 - name: matplotlib-inline
@@ -14172,54 +13898,6 @@ package:
   hash:
     md5: 37293a85a0f4f77bbd9cf7aaefc62609
     sha256: d09c47c2cf456de5c09fa66d2c3c5035aa1fa228a1983a433c47b876aa16ce90
-  category: main
-  optional: false
-- name: mypy_extensions
-  version: 1.1.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.1.0-pyha770c72_0.conda
-  hash:
-    md5: e9c622e0d00fa24a6292279af3ab6d06
-    sha256: 6ed158e4e5dd8f6a10ad9e525631e35cee8557718f83de7a4e3966b1f772c4b1
-  category: main
-  optional: false
-- name: mypy_extensions
-  version: 1.1.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.1.0-pyha770c72_0.conda
-  hash:
-    md5: e9c622e0d00fa24a6292279af3ab6d06
-    sha256: 6ed158e4e5dd8f6a10ad9e525631e35cee8557718f83de7a4e3966b1f772c4b1
-  category: main
-  optional: false
-- name: mypy_extensions
-  version: 1.1.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.1.0-pyha770c72_0.conda
-  hash:
-    md5: e9c622e0d00fa24a6292279af3ab6d06
-    sha256: 6ed158e4e5dd8f6a10ad9e525631e35cee8557718f83de7a4e3966b1f772c4b1
-  category: main
-  optional: false
-- name: mypy_extensions
-  version: 1.1.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    python: '>=3.9'
-  url: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.1.0-pyha770c72_0.conda
-  hash:
-    md5: e9c622e0d00fa24a6292279af3ab6d06
-    sha256: 6ed158e4e5dd8f6a10ad9e525631e35cee8557718f83de7a4e3966b1f772c4b1
   category: main
   optional: false
 - name: narwhals
@@ -14862,77 +14540,74 @@ package:
   category: main
   optional: false
 - name: numpy
-  version: 2.3.5
+  version: 1.26.4
   manager: conda
   platform: linux-64
   dependencies:
-    __glibc: '>=2.17,<3.0.a0'
     libblas: '>=3.9.0,<4.0a0'
     libcblas: '>=3.9.0,<4.0a0'
-    libgcc: '>=14'
+    libgcc-ng: '>=12'
     liblapack: '>=3.9.0,<4.0a0'
-    libstdcxx: '>=14'
-    python: ''
+    libstdcxx-ng: '>=12'
+    python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-2.3.5-py312h33ff503_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py312heda63a1_0.conda
   hash:
-    md5: 1570db96376f9f01cf495afe203672e5
-    sha256: 68b5dd7e4d12295c44130e3a777462dbc8886ca0a7d141f1ff5ab0375df5da30
+    md5: d8285bea2a350f63fab23bf460221f3f
+    sha256: fe3459c75cf84dcef6ef14efcc4adb0ade66038ddd27cadb894f34f4797687d8
   category: main
   optional: false
 - name: numpy
-  version: 2.3.5
+  version: 1.26.4
   manager: conda
   platform: osx-64
   dependencies:
-    __osx: '>=10.13'
     libblas: '>=3.9.0,<4.0a0'
     libcblas: '>=3.9.0,<4.0a0'
-    libcxx: '>=19'
+    libcxx: '>=16'
     liblapack: '>=3.9.0,<4.0a0'
-    python: ''
+    python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/osx-64/numpy-2.3.5-py312ha3982b3_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-64/numpy-1.26.4-py312he3a82b2_0.conda
   hash:
-    md5: 6941ace329a1f088d1b3b399369aecec
-    sha256: 62c2a6fb30fec82f8d46defcf33c94a04d5c890ce02b3ddeeda3263f9043688c
+    md5: 96c61a21c4276613748dba069554846b
+    sha256: 6152b73fba3e227afa4952df8753128fc9669bbaf142ee8f9972bf9df3bf8856
   category: main
   optional: false
 - name: numpy
-  version: 2.3.5
+  version: 1.26.4
   manager: conda
   platform: osx-arm64
   dependencies:
-    __osx: '>=11.0'
     libblas: '>=3.9.0,<4.0a0'
     libcblas: '>=3.9.0,<4.0a0'
-    libcxx: '>=19'
+    libcxx: '>=16'
     liblapack: '>=3.9.0,<4.0a0'
-    python: 3.12.*
+    python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/numpy-2.3.5-py312h85ea64e_0.conda
+  url: https://conda.anaconda.org/conda-forge/osx-arm64/numpy-1.26.4-py312h8442bc7_0.conda
   hash:
-    md5: ee4c185ae9c1edeb8e8cd26273c90a9a
-    sha256: 095dc7f15d2f8d9970a6a4e9d4a1980989a4209cd34c2b756fbd40e71f6990cc
+    md5: d83fc83d589e2625a3451c9a7e21047c
+    sha256: c8841d6d6f61fd70ca80682efbab6bdb8606dc77c68d8acabfbd7c222054f518
   category: main
   optional: false
 - name: numpy
-  version: 2.3.5
+  version: 1.26.4
   manager: conda
   platform: win-64
   dependencies:
     libblas: '>=3.9.0,<4.0a0'
     libcblas: '>=3.9.0,<4.0a0'
     liblapack: '>=3.9.0,<4.0a0'
-    python: ''
+    python: '>=3.12,<3.13.0a0'
     python_abi: 3.12.*
     ucrt: '>=10.0.20348.0'
-    vc: '>=14.3,<15'
-    vc14_runtime: '>=14.44.35208'
-  url: https://conda.anaconda.org/conda-forge/win-64/numpy-2.3.5-py312ha72d056_0.conda
+    vc: '>=14.2,<15'
+    vc14_runtime: '>=14.29.30139'
+  url: https://conda.anaconda.org/conda-forge/win-64/numpy-1.26.4-py312h8753938_0.conda
   hash:
-    md5: 1c96af76fd575e8dcc48eea3e851579f
-    sha256: 1db03d0b892a196351544dabf8ac93a7f9f78dc85d3732de31ecb52c0da65d1b
+    md5: f9ac74c3b07c396014434aca1e58d362
+    sha256: 73570817a5109d396b4ebbe5124a89525959269fd33fa33fd413700289fbe0ef
   category: main
   optional: false
 - name: openjpeg
@@ -15329,126 +15004,6 @@ package:
     sha256: 355c8bf100c492f78cd0ca763e08fb0ed7a894f42f4825a6edfec7d78ae0976e
   category: main
   optional: false
-- name: pandera
-  version: 0.27.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    numpy: '>=1.24.4'
-    pandas: '>=2.1.1'
-    pandera-base: 0.27.0
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-0.27.0-hd8ed1ab_0.conda
-  hash:
-    md5: 25713473a96356b4aca1e91587a9060d
-    sha256: 4584f1fb44e850a41f7a201367748d6e2dbaaafd39a90b37d0741986cbfc8187
-  category: main
-  optional: false
-- name: pandera
-  version: 0.27.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    numpy: '>=1.24.4'
-    pandas: '>=2.1.1'
-    pandera-base: 0.27.0
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-0.27.0-hd8ed1ab_0.conda
-  hash:
-    md5: 25713473a96356b4aca1e91587a9060d
-    sha256: 4584f1fb44e850a41f7a201367748d6e2dbaaafd39a90b37d0741986cbfc8187
-  category: main
-  optional: false
-- name: pandera
-  version: 0.27.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    numpy: '>=1.24.4'
-    pandas: '>=2.1.1'
-    pandera-base: 0.27.0
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-0.27.0-hd8ed1ab_0.conda
-  hash:
-    md5: 25713473a96356b4aca1e91587a9060d
-    sha256: 4584f1fb44e850a41f7a201367748d6e2dbaaafd39a90b37d0741986cbfc8187
-  category: main
-  optional: false
-- name: pandera
-  version: 0.27.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    numpy: '>=1.24.4'
-    pandas: '>=2.1.1'
-    pandera-base: 0.27.0
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-0.27.0-hd8ed1ab_0.conda
-  hash:
-    md5: 25713473a96356b4aca1e91587a9060d
-    sha256: 4584f1fb44e850a41f7a201367748d6e2dbaaafd39a90b37d0741986cbfc8187
-  category: main
-  optional: false
-- name: pandera-base
-  version: 0.27.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    packaging: '>=20.0'
-    pydantic: ''
-    python: '>=3.10'
-    typeguard: ''
-    typing_inspect: '>=0.6.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-base-0.27.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: ecc2ec67de8b067093567ba3bec6b306
-    sha256: 8a6a81f7209d4880a84ba5dc782b0898d61450373c0b6192c51084b9eae7bca5
-  category: main
-  optional: false
-- name: pandera-base
-  version: 0.27.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    packaging: '>=20.0'
-    pydantic: ''
-    python: '>=3.10'
-    typeguard: ''
-    typing_inspect: '>=0.6.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-base-0.27.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: ecc2ec67de8b067093567ba3bec6b306
-    sha256: 8a6a81f7209d4880a84ba5dc782b0898d61450373c0b6192c51084b9eae7bca5
-  category: main
-  optional: false
-- name: pandera-base
-  version: 0.27.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    packaging: '>=20.0'
-    pydantic: ''
-    python: '>=3.10'
-    typeguard: ''
-    typing_inspect: '>=0.6.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-base-0.27.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: ecc2ec67de8b067093567ba3bec6b306
-    sha256: 8a6a81f7209d4880a84ba5dc782b0898d61450373c0b6192c51084b9eae7bca5
-  category: main
-  optional: false
-- name: pandera-base
-  version: 0.27.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    packaging: '>=20.0'
-    pydantic: ''
-    python: '>=3.10'
-    typeguard: ''
-    typing_inspect: '>=0.6.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/pandera-base-0.27.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: ecc2ec67de8b067093567ba3bec6b306
-    sha256: 8a6a81f7209d4880a84ba5dc782b0898d61450373c0b6192c51084b9eae7bca5
-  category: main
-  optional: false
 - name: pandocfilters
   version: 1.5.0
   manager: conda
@@ -15640,58 +15195,6 @@ package:
     sha256: 30de7b4d15fbe53ffe052feccde31223a236dae0495bab54ab2479de30b2990f
   category: main
   optional: false
-- name: patsy
-  version: 1.0.2
-  manager: conda
-  platform: linux-64
-  dependencies:
-    numpy: '>=1.4.0'
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
-  hash:
-    md5: 8678577a52161cc4e1c93fcc18e8a646
-    sha256: 9678f4745e6b82b36fab9657a19665081862268cb079cf9acf878ab2c4fadee9
-  category: main
-  optional: false
-- name: patsy
-  version: 1.0.2
-  manager: conda
-  platform: osx-64
-  dependencies:
-    numpy: '>=1.4.0'
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
-  hash:
-    md5: 8678577a52161cc4e1c93fcc18e8a646
-    sha256: 9678f4745e6b82b36fab9657a19665081862268cb079cf9acf878ab2c4fadee9
-  category: main
-  optional: false
-- name: patsy
-  version: 1.0.2
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    numpy: '>=1.4.0'
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
-  hash:
-    md5: 8678577a52161cc4e1c93fcc18e8a646
-    sha256: 9678f4745e6b82b36fab9657a19665081862268cb079cf9acf878ab2c4fadee9
-  category: main
-  optional: false
-- name: patsy
-  version: 1.0.2
-  manager: conda
-  platform: win-64
-  dependencies:
-    numpy: '>=1.4.0'
-    python: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
-  hash:
-    md5: 8678577a52161cc4e1c93fcc18e8a646
-    sha256: 9678f4745e6b82b36fab9657a19665081862268cb079cf9acf878ab2c4fadee9
-  category: main
-  optional: false
 - name: pcre2
   version: '10.46'
   manager: conda
@@ -15788,6 +15291,54 @@ package:
   hash:
     md5: d0d408b1f18883a944376da5cf8101ea
     sha256: 202af1de83b585d36445dc1fda94266697341994d1a3328fabde4989e1b3d07a
+  category: main
+  optional: false
+- name: pickleshare
+  version: 0.7.5
+  manager: conda
+  platform: linux-64
+  dependencies:
+    python: '>=3.9'
+  url: https://conda.anaconda.org/conda-forge/noarch/pickleshare-0.7.5-pyhd8ed1ab_1004.conda
+  hash:
+    md5: 11a9d1d09a3615fc07c3faf79bc0b943
+    sha256: e2ac3d66c367dada209fc6da43e645672364b9fd5f9d28b9f016e24b81af475b
+  category: main
+  optional: false
+- name: pickleshare
+  version: 0.7.5
+  manager: conda
+  platform: osx-64
+  dependencies:
+    python: '>=3.9'
+  url: https://conda.anaconda.org/conda-forge/noarch/pickleshare-0.7.5-pyhd8ed1ab_1004.conda
+  hash:
+    md5: 11a9d1d09a3615fc07c3faf79bc0b943
+    sha256: e2ac3d66c367dada209fc6da43e645672364b9fd5f9d28b9f016e24b81af475b
+  category: main
+  optional: false
+- name: pickleshare
+  version: 0.7.5
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    python: '>=3.9'
+  url: https://conda.anaconda.org/conda-forge/noarch/pickleshare-0.7.5-pyhd8ed1ab_1004.conda
+  hash:
+    md5: 11a9d1d09a3615fc07c3faf79bc0b943
+    sha256: e2ac3d66c367dada209fc6da43e645672364b9fd5f9d28b9f016e24b81af475b
+  category: main
+  optional: false
+- name: pickleshare
+  version: 0.7.5
+  manager: conda
+  platform: win-64
+  dependencies:
+    python: '>=3.9'
+  url: https://conda.anaconda.org/conda-forge/noarch/pickleshare-0.7.5-pyhd8ed1ab_1004.conda
+  hash:
+    md5: 11a9d1d09a3615fc07c3faf79bc0b943
+    sha256: e2ac3d66c367dada209fc6da43e645672364b9fd5f9d28b9f016e24b81af475b
   category: main
   optional: false
 - name: pillow
@@ -16095,62 +15646,6 @@ package:
     sha256: 7efd51b48d908de2d75cbb3c4a2e80dd9454e1c5bb8191b261af3136f7fa5888
   category: main
   optional: false
-- name: plotly
-  version: 6.5.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    narwhals: '>=1.15.1'
-    packaging: ''
-    python: '>=3.10'
-  url: https://conda.anaconda.org/conda-forge/noarch/plotly-6.5.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: 6d4c79b604d50c1140c32164f7eca72a
-    sha256: 13b06d2380fc46c299d2ae3465f90f156929b7f98597fc22b0e7ac0cfd40c20d
-  category: main
-  optional: false
-- name: plotly
-  version: 6.5.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    narwhals: '>=1.15.1'
-    packaging: ''
-    python: '>=3.10'
-  url: https://conda.anaconda.org/conda-forge/noarch/plotly-6.5.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: 6d4c79b604d50c1140c32164f7eca72a
-    sha256: 13b06d2380fc46c299d2ae3465f90f156929b7f98597fc22b0e7ac0cfd40c20d
-  category: main
-  optional: false
-- name: plotly
-  version: 6.5.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    narwhals: '>=1.15.1'
-    packaging: ''
-    python: '>=3.10'
-  url: https://conda.anaconda.org/conda-forge/noarch/plotly-6.5.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: 6d4c79b604d50c1140c32164f7eca72a
-    sha256: 13b06d2380fc46c299d2ae3465f90f156929b7f98597fc22b0e7ac0cfd40c20d
-  category: main
-  optional: false
-- name: plotly
-  version: 6.5.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    narwhals: '>=1.15.1'
-    packaging: ''
-    python: '>=3.10'
-  url: https://conda.anaconda.org/conda-forge/noarch/plotly-6.5.0-pyhd8ed1ab_0.conda
-  hash:
-    md5: 6d4c79b604d50c1140c32164f7eca72a
-    sha256: 13b06d2380fc46c299d2ae3465f90f156929b7f98597fc22b0e7ac0cfd40c20d
-  category: main
-  optional: false
 - name: pluggy
   version: 1.6.0
   manager: conda
@@ -16346,6 +15841,54 @@ package:
   hash:
     md5: edb16f14d920fb3faf17f5ce582942d6
     sha256: 4817651a276016f3838957bfdf963386438c70761e9faec7749d411635979bae
+  category: main
+  optional: false
+- name: prompt_toolkit
+  version: 3.0.52
+  manager: conda
+  platform: linux-64
+  dependencies:
+    prompt-toolkit: '>=3.0.52,<3.0.53.0a0'
+  url: https://conda.anaconda.org/conda-forge/noarch/prompt_toolkit-3.0.52-hd8ed1ab_0.conda
+  hash:
+    md5: 6d034d3a6093adbba7b24cb69c8c621e
+    sha256: e79922a360d7e620df978417dd033e66226e809961c3e659a193f978a75a9b0b
+  category: main
+  optional: false
+- name: prompt_toolkit
+  version: 3.0.52
+  manager: conda
+  platform: osx-64
+  dependencies:
+    prompt-toolkit: '>=3.0.52,<3.0.53.0a0'
+  url: https://conda.anaconda.org/conda-forge/noarch/prompt_toolkit-3.0.52-hd8ed1ab_0.conda
+  hash:
+    md5: 6d034d3a6093adbba7b24cb69c8c621e
+    sha256: e79922a360d7e620df978417dd033e66226e809961c3e659a193f978a75a9b0b
+  category: main
+  optional: false
+- name: prompt_toolkit
+  version: 3.0.52
+  manager: conda
+  platform: osx-arm64
+  dependencies:
+    prompt-toolkit: '>=3.0.52,<3.0.53.0a0'
+  url: https://conda.anaconda.org/conda-forge/noarch/prompt_toolkit-3.0.52-hd8ed1ab_0.conda
+  hash:
+    md5: 6d034d3a6093adbba7b24cb69c8c621e
+    sha256: e79922a360d7e620df978417dd033e66226e809961c3e659a193f978a75a9b0b
+  category: main
+  optional: false
+- name: prompt_toolkit
+  version: 3.0.52
+  manager: conda
+  platform: win-64
+  dependencies:
+    prompt-toolkit: '>=3.0.52,<3.0.53.0a0'
+  url: https://conda.anaconda.org/conda-forge/noarch/prompt_toolkit-3.0.52-hd8ed1ab_0.conda
+  hash:
+    md5: 6d034d3a6093adbba7b24cb69c8c621e
+    sha256: e79922a360d7e620df978417dd033e66226e809961c3e659a193f978a75a9b0b
   category: main
   optional: false
 - name: protobuf
@@ -17425,6 +16968,7 @@ package:
     libzlib: '>=1.3.1,<2.0a0'
     ncurses: '>=6.5,<7.0a0'
     openssl: '>=3.5.4,<4.0a0'
+    pip: ''
     readline: '>=8.2,<9.0a0'
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
@@ -17448,6 +16992,7 @@ package:
     libzlib: '>=1.3.1,<2.0a0'
     ncurses: '>=6.5,<7.0a0'
     openssl: '>=3.5.4,<4.0a0'
+    pip: ''
     readline: '>=8.2,<9.0a0'
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
@@ -17471,6 +17016,7 @@ package:
     libzlib: '>=1.3.1,<2.0a0'
     ncurses: '>=6.5,<7.0a0'
     openssl: '>=3.5.4,<4.0a0'
+    pip: ''
     readline: '>=8.2,<9.0a0'
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
@@ -17492,6 +17038,7 @@ package:
     libsqlite: '>=3.50.4,<4.0a0'
     libzlib: '>=1.3.1,<2.0a0'
     openssl: '>=3.5.4,<4.0a0'
+    pip: ''
     tk: '>=8.6.13,<8.7.0a0'
     tzdata: ''
     ucrt: '>=10.0.20348.0'
@@ -19795,85 +19342,6 @@ package:
     sha256: 570da295d421661af487f1595045760526964f41471021056e993e73089e9c41
   category: main
   optional: false
-- name: statsmodels
-  version: 0.14.5
-  manager: conda
-  platform: linux-64
-  dependencies:
-    __glibc: '>=2.17,<3.0.a0'
-    libgcc: '>=14'
-    numpy: '>=1.23,<3'
-    packaging: '>=21.3'
-    pandas: '!=2.1.0,>=1.4'
-    patsy: '>=0.5.6'
-    python: '>=3.12,<3.13.0a0'
-    python_abi: 3.12.*
-    scipy: '!=1.9.2,>=1.8'
-  url: https://conda.anaconda.org/conda-forge/linux-64/statsmodels-0.14.5-py312h4f23490_1.conda
-  hash:
-    md5: 35b9b77a76cf6b17872513ba57bcc975
-    sha256: 5ea409c808240d4aafd4b90f2b881cab0ae411187caed90008a843748723f115
-  category: main
-  optional: false
-- name: statsmodels
-  version: 0.14.5
-  manager: conda
-  platform: osx-64
-  dependencies:
-    __osx: '>=10.13'
-    numpy: '>=1.23,<3'
-    packaging: '>=21.3'
-    pandas: '!=2.1.0,>=1.4'
-    patsy: '>=0.5.6'
-    python: '>=3.12,<3.13.0a0'
-    python_abi: 3.12.*
-    scipy: '!=1.9.2,>=1.8'
-  url: https://conda.anaconda.org/conda-forge/osx-64/statsmodels-0.14.5-py312h391ab28_1.conda
-  hash:
-    md5: 1ec5ac2091ec31f1c2ee57a1bf66b4cb
-    sha256: 2e5da9f4c3d44cf64b1ef418d10259920f72b2ff214b400481968332c7b8e705
-  category: main
-  optional: false
-- name: statsmodels
-  version: 0.14.5
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    __osx: '>=11.0'
-    numpy: '>=1.23,<3'
-    packaging: '>=21.3'
-    pandas: '!=2.1.0,>=1.4'
-    patsy: '>=0.5.6'
-    python: '>=3.12,<3.13.0a0'
-    python_abi: 3.12.*
-    scipy: '!=1.9.2,>=1.8'
-  url: https://conda.anaconda.org/conda-forge/osx-arm64/statsmodels-0.14.5-py312ha11c99a_1.conda
-  hash:
-    md5: 022490fa1d2b8095d91a5ea9f7e2f772
-    sha256: 3298856f15a82df03d700251a81f82b36b88cf365783fb31a7d550110f80f100
-  category: main
-  optional: false
-- name: statsmodels
-  version: 0.14.5
-  manager: conda
-  platform: win-64
-  dependencies:
-    numpy: '>=1.23,<3'
-    packaging: '>=21.3'
-    pandas: '!=2.1.0,>=1.4'
-    patsy: '>=0.5.6'
-    python: '>=3.12,<3.13.0a0'
-    python_abi: 3.12.*
-    scipy: '!=1.9.2,>=1.8'
-    ucrt: '>=10.0.20348.0'
-    vc: '>=14.3,<15'
-    vc14_runtime: '>=14.44.35208'
-  url: https://conda.anaconda.org/conda-forge/win-64/statsmodels-0.14.5-py312h196c9fc_1.conda
-  hash:
-    md5: dbc75fe20560c82d95f93f3565655171
-    sha256: 7cbdfb5932db1acbc51feebb885909aa77181414b560e10f2c735ef0807e8f5f
-  category: main
-  optional: false
 - name: tabulate
   version: 0.9.0
   manager: conda
@@ -20502,66 +19970,6 @@ package:
     sha256: df334b8978edc4f42e7056764db1a26f1e4c6e6a29d5e2ca426ed5b2f09d24a0
   category: main
   optional: false
-- name: typeguard
-  version: 4.4.4
-  manager: conda
-  platform: linux-64
-  dependencies:
-    importlib-metadata: '>=3.6'
-    python: '>=3.9'
-    typing-extensions: '>=4.10.0'
-    typing_extensions: '>=4.14.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/typeguard-4.4.4-pyhd8ed1ab_0.conda
-  hash:
-    md5: 8b2613dbfd4e2bc9080b2779b53fc210
-    sha256: 591e03a61b4966a61b15a99f91d462840b6e77bf707ecb48690b24649fee921a
-  category: main
-  optional: false
-- name: typeguard
-  version: 4.4.4
-  manager: conda
-  platform: osx-64
-  dependencies:
-    importlib-metadata: '>=3.6'
-    python: '>=3.9'
-    typing-extensions: '>=4.10.0'
-    typing_extensions: '>=4.14.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/typeguard-4.4.4-pyhd8ed1ab_0.conda
-  hash:
-    md5: 8b2613dbfd4e2bc9080b2779b53fc210
-    sha256: 591e03a61b4966a61b15a99f91d462840b6e77bf707ecb48690b24649fee921a
-  category: main
-  optional: false
-- name: typeguard
-  version: 4.4.4
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    importlib-metadata: '>=3.6'
-    python: '>=3.9'
-    typing-extensions: '>=4.10.0'
-    typing_extensions: '>=4.14.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/typeguard-4.4.4-pyhd8ed1ab_0.conda
-  hash:
-    md5: 8b2613dbfd4e2bc9080b2779b53fc210
-    sha256: 591e03a61b4966a61b15a99f91d462840b6e77bf707ecb48690b24649fee921a
-  category: main
-  optional: false
-- name: typeguard
-  version: 4.4.4
-  manager: conda
-  platform: win-64
-  dependencies:
-    importlib-metadata: '>=3.6'
-    python: '>=3.9'
-    typing-extensions: '>=4.10.0'
-    typing_extensions: '>=4.14.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/typeguard-4.4.4-pyhd8ed1ab_0.conda
-  hash:
-    md5: 8b2613dbfd4e2bc9080b2779b53fc210
-    sha256: 591e03a61b4966a61b15a99f91d462840b6e77bf707ecb48690b24649fee921a
-  category: main
-  optional: false
 - name: typing-extensions
   version: 4.15.0
   manager: conda
@@ -20708,62 +20116,6 @@ package:
   hash:
     md5: 0caa1af407ecff61170c9437a808404d
     sha256: 032271135bca55aeb156cee361c81350c6f3fb203f57d024d7e5a1fc9ef18731
-  category: main
-  optional: false
-- name: typing_inspect
-  version: 0.9.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    mypy_extensions: '>=0.3.0'
-    python: '>=3.9'
-    typing_extensions: '>=3.7.4'
-  url: https://conda.anaconda.org/conda-forge/noarch/typing_inspect-0.9.0-pyhd8ed1ab_1.conda
-  hash:
-    md5: fa31df4d4193aabccaf09ce78a187faf
-    sha256: a3fbdd31b509ff16c7314e8d01c41d9146504df632a360ab30dbc1d3ca79b7c0
-  category: main
-  optional: false
-- name: typing_inspect
-  version: 0.9.0
-  manager: conda
-  platform: osx-64
-  dependencies:
-    mypy_extensions: '>=0.3.0'
-    python: '>=3.9'
-    typing_extensions: '>=3.7.4'
-  url: https://conda.anaconda.org/conda-forge/noarch/typing_inspect-0.9.0-pyhd8ed1ab_1.conda
-  hash:
-    md5: fa31df4d4193aabccaf09ce78a187faf
-    sha256: a3fbdd31b509ff16c7314e8d01c41d9146504df632a360ab30dbc1d3ca79b7c0
-  category: main
-  optional: false
-- name: typing_inspect
-  version: 0.9.0
-  manager: conda
-  platform: osx-arm64
-  dependencies:
-    mypy_extensions: '>=0.3.0'
-    python: '>=3.9'
-    typing_extensions: '>=3.7.4'
-  url: https://conda.anaconda.org/conda-forge/noarch/typing_inspect-0.9.0-pyhd8ed1ab_1.conda
-  hash:
-    md5: fa31df4d4193aabccaf09ce78a187faf
-    sha256: a3fbdd31b509ff16c7314e8d01c41d9146504df632a360ab30dbc1d3ca79b7c0
-  category: main
-  optional: false
-- name: typing_inspect
-  version: 0.9.0
-  manager: conda
-  platform: win-64
-  dependencies:
-    mypy_extensions: '>=0.3.0'
-    python: '>=3.9'
-    typing_extensions: '>=3.7.4'
-  url: https://conda.anaconda.org/conda-forge/noarch/typing_inspect-0.9.0-pyhd8ed1ab_1.conda
-  hash:
-    md5: fa31df4d4193aabccaf09ce78a187faf
-    sha256: a3fbdd31b509ff16c7314e8d01c41d9146504df632a360ab30dbc1d3ca79b7c0
   category: main
   optional: false
 - name: typing_utils
@@ -22858,5 +22210,701 @@ package:
   url: https://files.pythonhosted.org/packages/ca/b3/df528cb8c8242485b7f5d4d973fea5233b216486b3e1d2d8b14d92772ddf/altair_ally-0.1.1.tar.gz
   hash:
     sha256: f8b7179fda6335322048f71ec29b827b63f658e8a9fb54426927597eeb1f446e
+  category: main
+  optional: false
+- name: category-encoders
+  version: 2.9.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '>=1.14.0'
+    pandas: '>=1.0.5'
+    patsy: '>=0.5.1'
+    scikit-learn: '>=1.6.0'
+    scipy: '>=1.0.0'
+    statsmodels: '>=0.9.0'
+  url: https://files.pythonhosted.org/packages/a6/06/afcae4dab08612dac244ace7f478543f4fb83bea94177231ef9b4f7bfa06/category_encoders-2.9.0-py3-none-any.whl
+  hash:
+    sha256: 49c0e49cd3bd93b21c0bcc928ecbe9b3d09951a6f7fff8cc67f1f33967887227
+  category: main
+  optional: false
+- name: category-encoders
+  version: 2.9.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '>=1.14.0'
+    pandas: '>=1.0.5'
+    patsy: '>=0.5.1'
+    scikit-learn: '>=1.6.0'
+    scipy: '>=1.0.0'
+    statsmodels: '>=0.9.0'
+  url: https://files.pythonhosted.org/packages/a6/06/afcae4dab08612dac244ace7f478543f4fb83bea94177231ef9b4f7bfa06/category_encoders-2.9.0-py3-none-any.whl
+  hash:
+    sha256: 49c0e49cd3bd93b21c0bcc928ecbe9b3d09951a6f7fff8cc67f1f33967887227
+  category: main
+  optional: false
+- name: category-encoders
+  version: 2.9.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '>=1.14.0'
+    pandas: '>=1.0.5'
+    patsy: '>=0.5.1'
+    scikit-learn: '>=1.6.0'
+    scipy: '>=1.0.0'
+    statsmodels: '>=0.9.0'
+  url: https://files.pythonhosted.org/packages/a6/06/afcae4dab08612dac244ace7f478543f4fb83bea94177231ef9b4f7bfa06/category_encoders-2.9.0-py3-none-any.whl
+  hash:
+    sha256: 49c0e49cd3bd93b21c0bcc928ecbe9b3d09951a6f7fff8cc67f1f33967887227
+  category: main
+  optional: false
+- name: category-encoders
+  version: 2.9.0
+  manager: pip
+  platform: win-64
+  dependencies:
+    numpy: '>=1.14.0'
+    pandas: '>=1.0.5'
+    patsy: '>=0.5.1'
+    scikit-learn: '>=1.6.0'
+    scipy: '>=1.0.0'
+    statsmodels: '>=0.9.0'
+  url: https://files.pythonhosted.org/packages/a6/06/afcae4dab08612dac244ace7f478543f4fb83bea94177231ef9b4f7bfa06/category_encoders-2.9.0-py3-none-any.whl
+  hash:
+    sha256: 49c0e49cd3bd93b21c0bcc928ecbe9b3d09951a6f7fff8cc67f1f33967887227
+  category: main
+  optional: false
+- name: deepchecks
+  version: 0.19.1
+  manager: pip
+  platform: linux-64
+  dependencies:
+    beautifulsoup4: '>=4.11.1'
+    category-encoders: '>=2.3.0'
+    ipykernel: '>=5.3.0'
+    ipython: '>=7.15.0'
+    ipywidgets: '>=7.6.5'
+    jsonpickle: '>=2'
+    jupyter-server: '>=2.7.2'
+    matplotlib: '>=3.3.4'
+    numpy: '>=1.22.2'
+    pandas: '>=1.1.5'
+    plotly: '>=5.13.1'
+    pynomaly: '>=0.3.3'
+    requests: '>=2.22.0'
+    scikit-learn: '>=0.23.2'
+    scipy: '>=1.4.1'
+    statsmodels: '>=0.13.5'
+    tqdm: '>=4.62.3'
+    typing-extensions: '>=4.0.0'
+  url: https://files.pythonhosted.org/packages/93/33/5af4ad37a258db5aa60b73fda875f362ef29a7e4b6b5f7760367113aa9ee/deepchecks-0.19.1-py3-none-any.whl
+  hash:
+    sha256: 839926b338aa76f97a0d1220fe0a9f7cf59c88de08fd06f228ef3aa9dd27abf4
+  category: main
+  optional: false
+- name: deepchecks
+  version: 0.19.1
+  manager: pip
+  platform: osx-64
+  dependencies:
+    beautifulsoup4: '>=4.11.1'
+    category-encoders: '>=2.3.0'
+    ipykernel: '>=5.3.0'
+    ipython: '>=7.15.0'
+    ipywidgets: '>=7.6.5'
+    jsonpickle: '>=2'
+    jupyter-server: '>=2.7.2'
+    matplotlib: '>=3.3.4'
+    numpy: '>=1.22.2'
+    pandas: '>=1.1.5'
+    plotly: '>=5.13.1'
+    pynomaly: '>=0.3.3'
+    requests: '>=2.22.0'
+    scikit-learn: '>=0.23.2'
+    scipy: '>=1.4.1'
+    statsmodels: '>=0.13.5'
+    tqdm: '>=4.62.3'
+    typing-extensions: '>=4.0.0'
+  url: https://files.pythonhosted.org/packages/93/33/5af4ad37a258db5aa60b73fda875f362ef29a7e4b6b5f7760367113aa9ee/deepchecks-0.19.1-py3-none-any.whl
+  hash:
+    sha256: 839926b338aa76f97a0d1220fe0a9f7cf59c88de08fd06f228ef3aa9dd27abf4
+  category: main
+  optional: false
+- name: deepchecks
+  version: 0.19.1
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    beautifulsoup4: '>=4.11.1'
+    category-encoders: '>=2.3.0'
+    ipykernel: '>=5.3.0'
+    ipython: '>=7.15.0'
+    ipywidgets: '>=7.6.5'
+    jsonpickle: '>=2'
+    jupyter-server: '>=2.7.2'
+    matplotlib: '>=3.3.4'
+    numpy: '>=1.22.2'
+    pandas: '>=1.1.5'
+    plotly: '>=5.13.1'
+    pynomaly: '>=0.3.3'
+    requests: '>=2.22.0'
+    scikit-learn: '>=0.23.2'
+    scipy: '>=1.4.1'
+    statsmodels: '>=0.13.5'
+    tqdm: '>=4.62.3'
+    typing-extensions: '>=4.0.0'
+  url: https://files.pythonhosted.org/packages/93/33/5af4ad37a258db5aa60b73fda875f362ef29a7e4b6b5f7760367113aa9ee/deepchecks-0.19.1-py3-none-any.whl
+  hash:
+    sha256: 839926b338aa76f97a0d1220fe0a9f7cf59c88de08fd06f228ef3aa9dd27abf4
+  category: main
+  optional: false
+- name: deepchecks
+  version: 0.19.1
+  manager: pip
+  platform: win-64
+  dependencies:
+    beautifulsoup4: '>=4.11.1'
+    category-encoders: '>=2.3.0'
+    ipykernel: '>=5.3.0'
+    ipython: '>=7.15.0'
+    ipywidgets: '>=7.6.5'
+    jsonpickle: '>=2'
+    jupyter-server: '>=2.7.2'
+    matplotlib: '>=3.3.4'
+    numpy: '>=1.22.2'
+    pandas: '>=1.1.5'
+    plotly: '>=5.13.1'
+    pynomaly: '>=0.3.3'
+    requests: '>=2.22.0'
+    scikit-learn: '>=0.23.2'
+    scipy: '>=1.4.1'
+    statsmodels: '>=0.13.5'
+    tqdm: '>=4.62.3'
+    typing-extensions: '>=4.0.0'
+  url: https://files.pythonhosted.org/packages/93/33/5af4ad37a258db5aa60b73fda875f362ef29a7e4b6b5f7760367113aa9ee/deepchecks-0.19.1-py3-none-any.whl
+  hash:
+    sha256: 839926b338aa76f97a0d1220fe0a9f7cf59c88de08fd06f228ef3aa9dd27abf4
+  category: main
+  optional: false
+- name: jsonpickle
+  version: 4.1.1
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl
+  hash:
+    sha256: bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91
+  category: main
+  optional: false
+- name: jsonpickle
+  version: 4.1.1
+  manager: pip
+  platform: osx-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl
+  hash:
+    sha256: bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91
+  category: main
+  optional: false
+- name: jsonpickle
+  version: 4.1.1
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl
+  hash:
+    sha256: bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91
+  category: main
+  optional: false
+- name: jsonpickle
+  version: 4.1.1
+  manager: pip
+  platform: win-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl
+  hash:
+    sha256: bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91
+  category: main
+  optional: false
+- name: mypy-extensions
+  version: 1.1.0
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
+  hash:
+    sha256: 1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505
+  category: main
+  optional: false
+- name: mypy-extensions
+  version: 1.1.0
+  manager: pip
+  platform: osx-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
+  hash:
+    sha256: 1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505
+  category: main
+  optional: false
+- name: mypy-extensions
+  version: 1.1.0
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
+  hash:
+    sha256: 1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505
+  category: main
+  optional: false
+- name: mypy-extensions
+  version: 1.1.0
+  manager: pip
+  platform: win-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl
+  hash:
+    sha256: 1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505
+  category: main
+  optional: false
+- name: pandera
+  version: 0.27.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    packaging: '>=20.0'
+    pydantic: '*'
+    typeguard: '*'
+    typing-extensions: '*'
+    typing-inspect: '>=0.6.0'
+  url: https://files.pythonhosted.org/packages/d5/26/8e4a28ffbf3406c60d58eaa7f0529fb6197f5ae49f77b173dc84c057e1a2/pandera-0.27.0-py3-none-any.whl
+  hash:
+    sha256: e43b8062dfcde984300d798686815cc93feaae09645d3cddee3ab437f2d11ed5
+  category: main
+  optional: false
+- name: pandera
+  version: 0.27.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    packaging: '>=20.0'
+    pydantic: '*'
+    typeguard: '*'
+    typing-extensions: '*'
+    typing-inspect: '>=0.6.0'
+  url: https://files.pythonhosted.org/packages/d5/26/8e4a28ffbf3406c60d58eaa7f0529fb6197f5ae49f77b173dc84c057e1a2/pandera-0.27.0-py3-none-any.whl
+  hash:
+    sha256: e43b8062dfcde984300d798686815cc93feaae09645d3cddee3ab437f2d11ed5
+  category: main
+  optional: false
+- name: pandera
+  version: 0.27.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    packaging: '>=20.0'
+    pydantic: '*'
+    typeguard: '*'
+    typing-extensions: '*'
+    typing-inspect: '>=0.6.0'
+  url: https://files.pythonhosted.org/packages/d5/26/8e4a28ffbf3406c60d58eaa7f0529fb6197f5ae49f77b173dc84c057e1a2/pandera-0.27.0-py3-none-any.whl
+  hash:
+    sha256: e43b8062dfcde984300d798686815cc93feaae09645d3cddee3ab437f2d11ed5
+  category: main
+  optional: false
+- name: pandera
+  version: 0.27.0
+  manager: pip
+  platform: win-64
+  dependencies:
+    packaging: '>=20.0'
+    pydantic: '*'
+    typeguard: '*'
+    typing-extensions: '*'
+    typing-inspect: '>=0.6.0'
+  url: https://files.pythonhosted.org/packages/d5/26/8e4a28ffbf3406c60d58eaa7f0529fb6197f5ae49f77b173dc84c057e1a2/pandera-0.27.0-py3-none-any.whl
+  hash:
+    sha256: e43b8062dfcde984300d798686815cc93feaae09645d3cddee3ab437f2d11ed5
+  category: main
+  optional: false
+- name: patsy
+  version: 1.0.2
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '>=1.4'
+  url: https://files.pythonhosted.org/packages/f1/70/ba4b949bdc0490ab78d545459acd7702b211dfccf7eb89bbc1060f52818d/patsy-1.0.2-py2.py3-none-any.whl
+  hash:
+    sha256: 37bfddbc58fcf0362febb5f54f10743f8b21dd2aa73dec7e7ef59d1b02ae668a
+  category: main
+  optional: false
+- name: patsy
+  version: 1.0.2
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '>=1.4'
+  url: https://files.pythonhosted.org/packages/f1/70/ba4b949bdc0490ab78d545459acd7702b211dfccf7eb89bbc1060f52818d/patsy-1.0.2-py2.py3-none-any.whl
+  hash:
+    sha256: 37bfddbc58fcf0362febb5f54f10743f8b21dd2aa73dec7e7ef59d1b02ae668a
+  category: main
+  optional: false
+- name: patsy
+  version: 1.0.2
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '>=1.4'
+  url: https://files.pythonhosted.org/packages/f1/70/ba4b949bdc0490ab78d545459acd7702b211dfccf7eb89bbc1060f52818d/patsy-1.0.2-py2.py3-none-any.whl
+  hash:
+    sha256: 37bfddbc58fcf0362febb5f54f10743f8b21dd2aa73dec7e7ef59d1b02ae668a
+  category: main
+  optional: false
+- name: patsy
+  version: 1.0.2
+  manager: pip
+  platform: win-64
+  dependencies:
+    numpy: '>=1.4'
+  url: https://files.pythonhosted.org/packages/f1/70/ba4b949bdc0490ab78d545459acd7702b211dfccf7eb89bbc1060f52818d/patsy-1.0.2-py2.py3-none-any.whl
+  hash:
+    sha256: 37bfddbc58fcf0362febb5f54f10743f8b21dd2aa73dec7e7ef59d1b02ae668a
+  category: main
+  optional: false
+- name: plotly
+  version: 6.5.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    narwhals: '>=1.15.1'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/e7/c3/3031c931098de393393e1f93a38dc9ed6805d86bb801acc3cf2d5bd1e6b7/plotly-6.5.0-py3-none-any.whl
+  hash:
+    sha256: 5ac851e100367735250206788a2b1325412aa4a4917a4fe3e6f0bc5aa6f3d90a
+  category: main
+  optional: false
+- name: plotly
+  version: 6.5.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    narwhals: '>=1.15.1'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/e7/c3/3031c931098de393393e1f93a38dc9ed6805d86bb801acc3cf2d5bd1e6b7/plotly-6.5.0-py3-none-any.whl
+  hash:
+    sha256: 5ac851e100367735250206788a2b1325412aa4a4917a4fe3e6f0bc5aa6f3d90a
+  category: main
+  optional: false
+- name: plotly
+  version: 6.5.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    narwhals: '>=1.15.1'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/e7/c3/3031c931098de393393e1f93a38dc9ed6805d86bb801acc3cf2d5bd1e6b7/plotly-6.5.0-py3-none-any.whl
+  hash:
+    sha256: 5ac851e100367735250206788a2b1325412aa4a4917a4fe3e6f0bc5aa6f3d90a
+  category: main
+  optional: false
+- name: plotly
+  version: 6.5.0
+  manager: pip
+  platform: win-64
+  dependencies:
+    narwhals: '>=1.15.1'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/e7/c3/3031c931098de393393e1f93a38dc9ed6805d86bb801acc3cf2d5bd1e6b7/plotly-6.5.0-py3-none-any.whl
+  hash:
+    sha256: 5ac851e100367735250206788a2b1325412aa4a4917a4fe3e6f0bc5aa6f3d90a
+  category: main
+  optional: false
+- name: pynomaly
+  version: 0.3.4
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '*'
+    python-utils: '*'
+  url: https://files.pythonhosted.org/packages/03/00/0af76dc221eb34f0d98af54024955ddc16080057a69d4c19329811aabc03/PyNomaly-0.3.4-py3-none-any.whl
+  hash:
+    sha256: e653f1e1c9a70c92170829f7440841e3b004528e1a1bfaea5e830e53fca26822
+  category: main
+  optional: false
+- name: pynomaly
+  version: 0.3.4
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '*'
+    python-utils: '*'
+  url: https://files.pythonhosted.org/packages/03/00/0af76dc221eb34f0d98af54024955ddc16080057a69d4c19329811aabc03/PyNomaly-0.3.4-py3-none-any.whl
+  hash:
+    sha256: e653f1e1c9a70c92170829f7440841e3b004528e1a1bfaea5e830e53fca26822
+  category: main
+  optional: false
+- name: pynomaly
+  version: 0.3.4
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '*'
+    python-utils: '*'
+  url: https://files.pythonhosted.org/packages/03/00/0af76dc221eb34f0d98af54024955ddc16080057a69d4c19329811aabc03/PyNomaly-0.3.4-py3-none-any.whl
+  hash:
+    sha256: e653f1e1c9a70c92170829f7440841e3b004528e1a1bfaea5e830e53fca26822
+  category: main
+  optional: false
+- name: pynomaly
+  version: 0.3.4
+  manager: pip
+  platform: win-64
+  dependencies:
+    numpy: '*'
+    python-utils: '*'
+  url: https://files.pythonhosted.org/packages/03/00/0af76dc221eb34f0d98af54024955ddc16080057a69d4c19329811aabc03/PyNomaly-0.3.4-py3-none-any.whl
+  hash:
+    sha256: e653f1e1c9a70c92170829f7440841e3b004528e1a1bfaea5e830e53fca26822
+  category: main
+  optional: false
+- name: python-utils
+  version: 3.9.1
+  manager: pip
+  platform: linux-64
+  dependencies:
+    typing-extensions: '>3.10.0.2'
+  url: https://files.pythonhosted.org/packages/d4/69/31c82567719b34d8f6b41077732589104883771d182a9f4ff3e71430999a/python_utils-3.9.1-py2.py3-none-any.whl
+  hash:
+    sha256: 0273d7363c7ad4b70999b2791d5ba6b55333d6f7a4e4c8b6b39fb82b5fab4613
+  category: main
+  optional: false
+- name: python-utils
+  version: 3.9.1
+  manager: pip
+  platform: osx-64
+  dependencies:
+    typing-extensions: '>3.10.0.2'
+  url: https://files.pythonhosted.org/packages/d4/69/31c82567719b34d8f6b41077732589104883771d182a9f4ff3e71430999a/python_utils-3.9.1-py2.py3-none-any.whl
+  hash:
+    sha256: 0273d7363c7ad4b70999b2791d5ba6b55333d6f7a4e4c8b6b39fb82b5fab4613
+  category: main
+  optional: false
+- name: python-utils
+  version: 3.9.1
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    typing-extensions: '>3.10.0.2'
+  url: https://files.pythonhosted.org/packages/d4/69/31c82567719b34d8f6b41077732589104883771d182a9f4ff3e71430999a/python_utils-3.9.1-py2.py3-none-any.whl
+  hash:
+    sha256: 0273d7363c7ad4b70999b2791d5ba6b55333d6f7a4e4c8b6b39fb82b5fab4613
+  category: main
+  optional: false
+- name: python-utils
+  version: 3.9.1
+  manager: pip
+  platform: win-64
+  dependencies:
+    typing-extensions: '>3.10.0.2'
+  url: https://files.pythonhosted.org/packages/d4/69/31c82567719b34d8f6b41077732589104883771d182a9f4ff3e71430999a/python_utils-3.9.1-py2.py3-none-any.whl
+  hash:
+    sha256: 0273d7363c7ad4b70999b2791d5ba6b55333d6f7a4e4c8b6b39fb82b5fab4613
+  category: main
+  optional: false
+- name: statsmodels
+  version: 0.14.5
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '>=1.22.3,<3'
+    packaging: '>=21.3'
+    pandas: '>=1.4,<2.1.0 || >2.1.0'
+    patsy: '>=0.5.6'
+    scipy: '>=1.8,<1.9.2 || >1.9.2'
+  url: https://files.pythonhosted.org/packages/66/de/dc6bf2f6e8c8eb4c5815560ebdbdf2d69a767bc0f65fde34bc086cf5b36d/statsmodels-0.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+  hash:
+    sha256: c3dd760a6fa80cd5e0371685c697bb9c2c0e6e1f394d975e596a1e6d0bbb9372
+  category: main
+  optional: false
+- name: statsmodels
+  version: 0.14.5
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '>=1.22.3,<3'
+    packaging: '>=21.3'
+    pandas: '>=1.4,<2.1.0 || >2.1.0'
+    patsy: '>=0.5.6'
+    scipy: '>=1.8,<1.9.2 || >1.9.2'
+  url: https://files.pythonhosted.org/packages/5f/a5/fcc4f5f16355660ce7a1742e28a43e3a9391b492fc4ff29fdd6893e81c05/statsmodels-0.14.5-cp312-cp312-macosx_10_13_x86_64.whl
+  hash:
+    sha256: 37e7364a39f9aa3b51d15a208c2868b90aadb8412f868530f5cba9197cb00eaa
+  category: main
+  optional: false
+- name: statsmodels
+  version: 0.14.5
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '>=1.22.3,<3'
+    packaging: '>=21.3'
+    pandas: '>=1.4,<2.1.0 || >2.1.0'
+    patsy: '>=0.5.6'
+    scipy: '>=1.8,<1.9.2 || >1.9.2'
+  url: https://files.pythonhosted.org/packages/1c/6f/db0cf5efa48277ac6218d9b981c8fd5e63c4c43e0d9d65015fdc38eed0ef/statsmodels-0.14.5-cp312-cp312-macosx_11_0_arm64.whl
+  hash:
+    sha256: 4263d7f4d0f1d5ac6eb4db22e1ee34264a14d634b9332c975c9d9109b6b46e12
+  category: main
+  optional: false
+- name: statsmodels
+  version: 0.14.5
+  manager: pip
+  platform: win-64
+  dependencies:
+    numpy: '>=1.22.3,<3'
+    packaging: '>=21.3'
+    pandas: '>=1.4,<2.1.0 || >2.1.0'
+    patsy: '>=0.5.6'
+    scipy: '>=1.8,<1.9.2 || >1.9.2'
+  url: https://files.pythonhosted.org/packages/df/4c/2feda3a9f0e17444a84ba5398ada6a4d2e1b8f832760048f04e2b8ea0c41/statsmodels-0.14.5-cp312-cp312-win_amd64.whl
+  hash:
+    sha256: b2ed065bfbaf8bb214c7201656df840457c2c8c65e1689e3eb09dc7440f9c61c
+  category: main
+  optional: false
+- name: tinycss2
+  version: 1.4.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    webencodings: '>=0.4'
+  url: https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl
+  hash:
+    sha256: 3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289
+  category: main
+  optional: false
+- name: tinycss2
+  version: 1.4.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    webencodings: '>=0.4'
+  url: https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl
+  hash:
+    sha256: 3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289
+  category: main
+  optional: false
+- name: tinycss2
+  version: 1.4.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    webencodings: '>=0.4'
+  url: https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl
+  hash:
+    sha256: 3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289
+  category: main
+  optional: false
+- name: tinycss2
+  version: 1.4.0
+  manager: pip
+  platform: win-64
+  dependencies:
+    webencodings: '>=0.4'
+  url: https://files.pythonhosted.org/packages/e6/34/ebdc18bae6aa14fbee1a08b63c015c72b64868ff7dae68808ab500c492e2/tinycss2-1.4.0-py3-none-any.whl
+  hash:
+    sha256: 3a49cf47b7675da0b15d0c6e1df8df4ebd96e9394bb905a5775adb0d884c5289
+  category: main
+  optional: false
+- name: typeguard
+  version: 4.4.4
+  manager: pip
+  platform: linux-64
+  dependencies:
+    typing-extensions: '>=4.14.0'
+  url: https://files.pythonhosted.org/packages/1b/a9/e3aee762739c1d7528da1c3e06d518503f8b6c439c35549b53735ba52ead/typeguard-4.4.4-py3-none-any.whl
+  hash:
+    sha256: b5f562281b6bfa1f5492470464730ef001646128b180769880468bd84b68b09e
+  category: main
+  optional: false
+- name: typeguard
+  version: 4.4.4
+  manager: pip
+  platform: osx-64
+  dependencies:
+    typing-extensions: '>=4.14.0'
+  url: https://files.pythonhosted.org/packages/1b/a9/e3aee762739c1d7528da1c3e06d518503f8b6c439c35549b53735ba52ead/typeguard-4.4.4-py3-none-any.whl
+  hash:
+    sha256: b5f562281b6bfa1f5492470464730ef001646128b180769880468bd84b68b09e
+  category: main
+  optional: false
+- name: typeguard
+  version: 4.4.4
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    typing-extensions: '>=4.14.0'
+  url: https://files.pythonhosted.org/packages/1b/a9/e3aee762739c1d7528da1c3e06d518503f8b6c439c35549b53735ba52ead/typeguard-4.4.4-py3-none-any.whl
+  hash:
+    sha256: b5f562281b6bfa1f5492470464730ef001646128b180769880468bd84b68b09e
+  category: main
+  optional: false
+- name: typeguard
+  version: 4.4.4
+  manager: pip
+  platform: win-64
+  dependencies:
+    typing-extensions: '>=4.14.0'
+  url: https://files.pythonhosted.org/packages/1b/a9/e3aee762739c1d7528da1c3e06d518503f8b6c439c35549b53735ba52ead/typeguard-4.4.4-py3-none-any.whl
+  hash:
+    sha256: b5f562281b6bfa1f5492470464730ef001646128b180769880468bd84b68b09e
+  category: main
+  optional: false
+- name: typing-inspect
+  version: 0.9.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    mypy-extensions: '>=0.3.0'
+    typing-extensions: '>=3.7.4'
+  url: https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl
+  hash:
+    sha256: 9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f
+  category: main
+  optional: false
+- name: typing-inspect
+  version: 0.9.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    mypy-extensions: '>=0.3.0'
+    typing-extensions: '>=3.7.4'
+  url: https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl
+  hash:
+    sha256: 9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f
+  category: main
+  optional: false
+- name: typing-inspect
+  version: 0.9.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    mypy-extensions: '>=0.3.0'
+    typing-extensions: '>=3.7.4'
+  url: https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl
+  hash:
+    sha256: 9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f
+  category: main
+  optional: false
+- name: typing-inspect
+  version: 0.9.0
+  manager: pip
+  platform: win-64
+  dependencies:
+    mypy-extensions: '>=0.3.0'
+    typing-extensions: '>=3.7.4'
+  url: https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl
+  hash:
+    sha256: 9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f
   category: main
   optional: false
