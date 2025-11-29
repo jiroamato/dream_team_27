@@ -14,63 +14,77 @@ The dataset used in this project is the Student Performance dataset created by P
 
 The final report can be found in the notebooks [here](https://jiroamato.github.io/student_grade_predictor/notebooks/student_grade_predictor_report.html).
 
+## Dependencies
+- [Docker](https://www.docker.com/) 
+
 ## Usage
 
-## Method 1 - Running Analysis with Docker (Preferred)
+### Method 1 - Running Analysis with Docker (Preferred)
 
-#### Prerequisites
+#### Setup
 
--   [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+> If you are using Windows or Mac, make sure [Docker Desktop](https://www.docker.com/products/docker-desktop/) is installed and running.
 
-#### Clone the Repository and Pull the Docker Image
-
-1.  Clone the repository:
+1.  Clone this GitHub repository:
 
 ``` bash
 git clone https://github.com/jiroamato/student_grade_predictor.git
-cd student_grade_predictor
 ```
 
-3.  Pull the Docker image:
+#### Running the analysis
 
-``` bash
-docker pull jiroamato/student-grade-predictor:latest
-```
-
-3.  Launch the container with Docker Compose:
+1.  Navigate to the project root in the terminal and run the following command:
 
 ``` bash
 docker compose up
 ```
 
-4.  Open the JupyterLab URL displayed in the terminal (starts with `http://127.0.0.1:8888/lab?token=...`)
+2.  Open the JupyterLab URL displayed in the terminal (starts with `http://127.0.0.1:8888/lab?token=...`)
 
-5.  Navigate to the `work` folder to access the project files
+<img src="img/jupyter-container-link.png" height=300 width=600>
 
-6.  To stop the container, press `Ctrl+C` in the terminal or run:
+3.  To run the analysis, navigate to `notebooks/` and open `student_grade_predictor_report.ipynb` in the JupyterLab launched from previous step. In the `Kernel` tab, click `Restart Kernel and Run All Cells...`.
+
+4.  To stop the container, press `Ctrl` + `C` in the terminal and run:
 
 ``` bash
 docker compose down
 ```
 
-## Method 2 - Running Analysis using Environment files
+5. To remove the image that was pulled locally, run the following command (optional):
 
-### Initial Setup (one-time)
+```bash
+docker rmi jiroamato/student_grade_predictor:tag
+```
 
-1.  Clone the repository and navigate to the project root directory
+#### For Returning Users
+
+To get the latest image after updates:
+
+``` bash
+docker compose pull
+docker compose up
+```
+
+### Method 2 - Running Analysis using Environment files
+
+#### Setup
+
+1.  Clone the repository and navigate to the project root directory:
 
 ``` bash
 git clone https://github.com/jiroamato/student_grade_predictor.git
-cd student_grade_predictor
 ```
 
-2.  Create the conda environment:
+#### Creating the environment
+
+1.  Create the conda environment:
 
 ``` bash
 conda env create --file environment.yml
 ```
 
-Alternatively, use `conda-lock` for a faster installation:
+Alternatively, use `conda-lock` for a faster installation (must have `conda-lock` installed):
 
 ``` bash
 conda-lock install --name student-grade-predictor conda-lock.yml
@@ -84,7 +98,7 @@ conda-lock install --name student-grade-predictor conda-lock.yml
 conda activate student_grade_predictor
 ```
 
-2.  Launch JupyterLab:
+2.  Launch JupyterLab from the root of this repository:
 
 ``` bash
 jupyter lab
@@ -92,9 +106,9 @@ jupyter lab
 
 3.  Open `notebooks/student_grade_predictor_report.ipynb` in Jupyter Lab
 
-4.  Under Switch Kernel, select "Python \[conda env:student_grade_predictor\]".
+4.  Under `Switch Kernel`, make sure that `Python [conda env:student_grade_predictor]` is selected. 
 
-5.  Under the "Kernel" menu click "Restart Kernel and Run All Cells..." to execute analysis and generate the final report.
+5.  Under the `Kernel` menu click `Restart Kernel and Run All Cells...` to execute analysis and generate the final report.
 
 ## Developer Notes
 
@@ -110,30 +124,22 @@ jupyter lab
 
 If you modify `environment.yml`:
 
-1.  Regenerate the lock file:
+1.  Regenerate the lock files:
 
 ``` bash
-conda-lock -f environment.yml -p linux-64 -p osx-arm64 -p win-64
+conda-lock lock -f environment.yml # general conda-lock file
+conda-lock lock -f environment.yml -k explicit # platform specific
 ```
 
-2.  Push the changes to trigger a new Docker build:
+2.  Push the changes into your own branch and create a pull request:
 
 ``` bash
-git add conda-linux-64.lock
-git commit -m "Update conda-linux-64.lock"
-git push
+git add conda-linux-64.lock conda-lock.yml
+git commit -m "Update conda-linux-64.lock and conda-lock.yml files"
+git push origin <branch_name>
 ```
 
-3.  The GitHub Actions workflow will automatically build and push the new image.
-
-```         
-
-**Push branch and create PR:**
-```bash
-git add README.md
-git commit -m "Add Docker usage instructions to README"
-git push -u origin docs/readme-docker
-```
+3.  Once the PR is merged into `main`, GitHub Actions workflow will automatically build and push the new image.
 
 ## License
 
