@@ -1,10 +1,16 @@
-FROM quay.io/jupyter/minimal-notebook:afe30f0c9ad8
+FROM condaforge/miniforge3:25.9.1-0
 
-COPY conda-linux-64.lock /tmp/conda-linux-64.lock
+COPY conda-lock.yml /tmp/conda-lock.yml
 
-# Install packages, clean cache, and fix permissions in a single layer
-RUN conda update --quiet --file /tmp/conda-linux-64.lock \
-    && pip install python-json-logger==2.0.7 altair_ally==0.1.1 deepchecks==0.19.1 pandera==0.27.0 \
+RUN conda install -c conda-forge conda-lock=3.0.4 -y \
+    && conda-lock install -n student-grade-predictor /tmp/conda-lock.yml \
     && conda clean --all -y -f \
-    && fix-permissions "${CONDA_DIR}" \
-    && fix-permissions "/home/${NB_USER}"
+    && echo "source /opt/conda/etc/profile.d/conda.sh && conda activate student-grade-predictor" >> ~/.bashrc
+
+SHELL ["/bin/bash", "-l", "-c"]
+
+WORKDIR /workplace
+
+EXPOSE 8888
+
+CMD ["/opt/conda/envs/student-grade-predictor/bin/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--IdentityProvider.token=''", "--ServerApp.password=''"]

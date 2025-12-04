@@ -6,6 +6,7 @@ dependencies:
   - python=3.12.12
   - pip=25.3
   - ipykernel=7.1.0
+  - click=8.3.1
   - jupyterlab=4.5.0
   - ipython=8.12
   - numpy=1.26.4  
@@ -24,3 +25,7 @@ dependencies:
     - deepchecks==0.19.1
     - pandera==0.27.0 
     - python-json-logger==2.0.7
+    - pytest==9.0.1
+    - pytest-mock==3.15.1
+    - pytest-cov==7.0.0
+    - quarto-cli==1.8.26
