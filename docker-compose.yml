@@ -1,10 +1,10 @@
 services:
   student-grade-predictor-env:
-    image: jiroamato/student_grade_predictor:5aa81a9
+    image: jiroamato/sgp:latest
     ports:
       - "8888:8888"
     volumes:
-      - .:/home/jovyan
+      - .:/workplace
     deploy:
       resources:
         limits:
