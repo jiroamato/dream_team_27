@@ -1,5 +1,9 @@
-import click
 import os
+import warnings
+os.environ["PYTHONWARNINGS"] = "ignore"
+warnings.filterwarnings('ignore')
+
+import click
 import altair as alt
 import numpy as np
 import pandas as pd
@@ -11,8 +15,6 @@ from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import RandomizedSearchCV
 from scipy.stats import loguniform
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning, module="deepchecks")
 
 TARGET = "G3"
 

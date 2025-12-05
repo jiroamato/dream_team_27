@@ -1,5 +1,9 @@
-import click
 import os
+import warnings
+os.environ["PYTHONWARNINGS"] = "ignore"
+warnings.filterwarnings('ignore')
+
+import click
 import altair as alt
 import altair_ally as aly
 import pandas as pd
