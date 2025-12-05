@@ -43,7 +43,53 @@ docker compose up
 
 <img src="img/jupyter-container-link.png" height=300 width=600>
 
-3.  To run the analysis, navigate to `notebooks/` and open `student_grade_predictor_report.ipynb` in the JupyterLab launched from previous step. In the `Kernel` tab, click `Restart Kernel and Run All Cells...`.
+3.  To run the analysis, enter the following commands in the terminal in the project root:
+
+``` bash
+# 1. Download data
+python src/download_data.py \
+    --url "https://archive.ics.uci.edu/static/public/320/student+performance.zip" \
+    --write-to "data/raw"
+
+# 2. Preprocess data
+python src/preprocess_data.py \
+    --raw-data "data/raw/student-por.csv" \
+    --data-to "data/processed" \
+    --preprocessor-to "results/models"
+
+# 3. Generate EDA figures
+python src/eda.py \
+    --processed-training-data "data/processed/student_train.csv" \
+    --plot-to "results/figures"
+
+# 4. Train model
+python src/fit_student_predictor.py \
+    --training-data "data/processed/student_train.csv" \
+    --preprocessor "results/models/student_preprocessor.pickle" \
+    --pipeline-to "results/models" \
+    --plot-to "results/figures"
+
+# 5. Evaluate model
+python src/evaluate_student_predictor.py \
+    --test-data "data/processed/student_test.csv" \
+    --pipeline-from "results/models/student_pipeline.pickle" \
+    --tables-to "results/tables" \
+    --plot-to "results/figures"
+
+# 6. Render report
+quarto render reports/student_grade_predictor_report.qmd --to html
+quarto render reports/student_grade_predictor_report.qmd --to pdf
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test file
+python -m pytest tests/test_download_data.py -v
+```
 
 4.  To stop the container, press `Ctrl` + `C` in the terminal and run:
 
@@ -51,11 +97,23 @@ docker compose up
 docker compose down
 ```
 
-5. To remove the image that was pulled locally, note the image name and tag from `docker-compose.yml` and run the following command:
+5. To remove the image that was pulled locally, note the image name and tag from `docker-
+### Running Tests
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test file
+python -m pytest tests/test_download_data.py -v
+```
+compose.yml` and run the following command:
 
 ```bash
 docker rmi <image_name:tag>
 ```
+
+
 
 #### For Returning Users
 
