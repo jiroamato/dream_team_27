@@ -19,13 +19,11 @@ The final report can be found in the notebooks [here](https://jiroamato.github.i
 
 ## Usage
 
-### Method 1 - Running Analysis with Docker (Preferred)
-
 #### Setup
 
 > If you are using Windows or Mac, make sure [Docker Desktop](https://www.docker.com/products/docker-desktop/) is installed and running.
 
-1.  Clone this GitHub repository:
+Clone this GitHub repository:
 
 ``` bash
 git clone https://github.com/jiroamato/student_grade_predictor.git
@@ -39,11 +37,53 @@ git clone https://github.com/jiroamato/student_grade_predictor.git
 docker compose up
 ```
 
-2.  Open the JupyterLab URL displayed in the terminal (starts with `http://127.0.0.1:8888/lab?token=...`)
+2.  Open the JupyterLab URL displayed in the terminal  `http://127.0.0.1:8888/lab` or simply type `localhost:8888` in your browser.
 
 <img src="img/jupyter-container-link.png" height=300 width=600>
 
-3.  To run the analysis, navigate to `notebooks/` and open `student_grade_predictor_report.ipynb` in the JupyterLab launched from previous step. In the `Kernel` tab, click `Restart Kernel and Run All Cells...`.
+3.   To run the analysis, enter the following commands in the terminal inside the JupyterLab instance with project root as the working directory: 
+
+``` bash
+# 1. Download data
+python src/download_data.py \
+    --url "https://archive.ics.uci.edu/static/public/320/student+performance.zip" \
+    --write-to "data/raw"
+
+# 2. Preprocess data
+python src/preprocess_data.py \
+    --raw-data "data/raw/student-por.csv" \
+    --data-to "data/processed" \
+    --preprocessor-to "results/models"
+    --seed 123
+
+# 3. Generate EDA figures
+python src/eda.py \
+    --processed-training-data "data/processed/student_train.csv" \
+    --plot-to "results/figures"
+
+# 4. Train and fit model
+python src/fit_student_predictor.py \
+    --training-data "data/processed/student_train.csv" \
+    --preprocessor "results/models/student_preprocessor.pickle" \
+    --pipeline-to "results/models" \
+    --plot-to "results/figures"
+    --seed 123
+
+# 5. Evaluate model
+python src/evaluate_student_predictor.py \
+    --test-data "data/processed/student_test.csv" \
+    --pipeline-from "results/models/student_pipeline.pickle" \
+    --tables-to "results/tables" \
+    --plot-to "results/figures"
+    --seed 123
+
+# 6. Render report
+quarto render reports/student_grade_predictor_report.qmd --to html
+quarto render reports/student_grade_predictor_report.qmd --to pdf
+
+# 7. Preview report (does not create a new file)
+quarto preview reports/student_grade_predictor_report.qmd
+```
 
 4.  To stop the container, press `Ctrl` + `C` in the terminal and run:
 
@@ -65,50 +105,6 @@ To get the latest image after updates:
 docker compose pull
 docker compose up
 ```
-
-### Method 2 - Running Analysis using Environment files
-
-#### Setup
-
-1.  Clone the repository and navigate to the project root directory:
-
-``` bash
-git clone https://github.com/jiroamato/student_grade_predictor.git
-```
-
-#### Creating the environment
-
-1.  Create the conda environment:
-
-``` bash
-conda env create --file environment.yml
-```
-
-Alternatively, use `conda-lock` for a faster installation (must have `conda-lock` installed):
-
-``` bash
-conda-lock install --name student-grade-predictor conda-lock.yml
-```
-
-#### Running the Analysis
-
-1.  Activate the environment by using the environment name defined in YAML file
-
-``` bash
-conda activate student_grade_predictor
-```
-
-2.  Launch JupyterLab from the root of this repository:
-
-``` bash
-jupyter lab
-```
-
-3.  Open `notebooks/student_grade_predictor_report.ipynb` in Jupyter Lab
-
-4.  Under `Switch Kernel`, make sure that `Python [conda env:student_grade_predictor]` is selected. 
-
-5.  Under the `Kernel` menu click `Restart Kernel and Run All Cells...` to execute analysis and generate the final report.
 
 ## Developer Notes
 
@@ -140,6 +136,18 @@ git push origin <branch_name>
 ```
 
 3.  Once the PR is merged into `main`, GitHub Actions workflow will automatically build and push the new image.
+
+### Running Tests
+
+Tests are run using the pytest command in the root of the project.
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test file
+python -m pytest tests/test_download_data.py -v
+```
 
 ## License
 
