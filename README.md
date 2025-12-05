@@ -46,36 +46,36 @@ docker compose up
 ``` bash
 # 1. Download data
 python src/download_data.py \
-    --url "https://archive.ics.uci.edu/static/public/320/student+performance.zip" \
-    --write-to "data/raw"
+    --url=https://archive.ics.uci.edu/static/public/320/student+performance.zip \
+    --write-to=data/raw
 
 # 2. Preprocess data
 python src/preprocess_data.py \
-    --raw-data "data/raw/student-por.csv" \
-    --data-to "data/processed" \
-    --preprocessor-to "results/models" \
-    --seed 123
+    --raw-data=data/raw/student-por.csv \
+    --data-to=data/processed \
+    --preprocessor-to=results/models \
+    --seed=123
 
 # 3. Generate EDA figures
 python src/eda.py \
-    --processed-training-data "data/processed/student_train.csv" \
-    --plot-to "results/figures"
+    --processed-training-data=data/processed/student_train.csv \
+    --plot-to=results/figures
 
 # 4. Train and fit model
 python src/fit_student_predictor.py \
-    --training-data "data/processed/student_train.csv" \
-    --preprocessor "results/models/student_preprocessor.pickle" \
-    --pipeline-to "results/models" \
-    --plot-to "results/figures" \
-    --seed 123
+    --training-data=data/processed/student_train.csv \
+    --preprocessor=results/models/student_preprocessor.pickle \
+    --pipeline-to=results/models \
+    --plot-to=results/figures \
+    --seed=123
 
 # 5. Evaluate model
 python src/evaluate_student_predictor.py \
-    --test-data "data/processed/student_test.csv" \
-    --pipeline-from "results/models/student_pipeline.pickle" \
-    --tables-to "results/tables" \
-    --plot-to "results/figures" \
-    --seed 123
+    --test-data=data/processed/student_test.csv \
+    --pipeline-from=results/models/student_pipeline.pickle \
+    --tables-to=results/tables \
+    --plot-to=results/figures \
+    --seed=123
 
 # 6. Render report
 quarto render reports/student_grade_predictor_report.qmd --to html
