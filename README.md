@@ -81,16 +81,6 @@ quarto render reports/student_grade_predictor_report.qmd --to html
 quarto render reports/student_grade_predictor_report.qmd --to pdf
 ```
 
-### Running Tests
-
-```bash
-# Run all tests
-python -m pytest tests/ -v
-
-# Run specific test file
-python -m pytest tests/test_download_data.py -v
-```
-
 4.  To stop the container, press `Ctrl` + `C` in the terminal and run:
 
 ``` bash
@@ -98,21 +88,6 @@ docker compose down
 ```
 
 5. To remove the image that was pulled locally, note the image name and tag from `docker-compose.yml` and run the following command:
-
-```bash
-docker rmi <image_name:tag>
-```
-
-### Running Tests
-
-```bash
-# Run all tests
-python -m pytest tests/ -v
-
-# Run specific test file
-python -m pytest tests/test_download_data.py -v
-```
-compose.yml` and run the following command:
 
 ```bash
 docker rmi <image_name:tag>
@@ -201,6 +176,18 @@ git push origin <branch_name>
 ```
 
 3.  Once the PR is merged into `main`, GitHub Actions workflow will automatically build and push the new image.
+
+### Running Tests
+
+Tests are run using the pytest command in the root of the project.
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run specific test file
+python -m pytest tests/test_download_data.py -v
+```
 
 ## License
 
