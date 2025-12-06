@@ -4,8 +4,11 @@ COPY conda-lock.yml /tmp/conda-lock.yml
 
 RUN conda install -c conda-forge conda-lock=3.0.4 -y \
     && conda-lock install -n student-grade-predictor /tmp/conda-lock.yml \
-    && conda clean --all -y -f \
-    && echo "source /opt/conda/etc/profile.d/conda.sh && conda activate student-grade-predictor" >> ~/.bashrc
+    && conda clean --all -y -f
+
+ENV PATH="/opt/conda/envs/student-grade-predictor/bin:$PATH"
+
+RUN quarto install tinytex --no-prompt
 
 SHELL ["/bin/bash", "-l", "-c"]
 

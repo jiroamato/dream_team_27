@@ -1,0 +1,112 @@
+---
+title: "Predicting Student Academic Performance from Demographic and Behavioural Data"
+author: "Shrijaa Venkatasubramanian Subashini, Rahiq Raees, Christine Chow & Jiro Amato"
+date: "2025/12/04"
+jupyter: python3
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    embed-resources: true
+  pdf:
+    toc: true
+    toc-depth: 2
+editor: source
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+from IPython.display import Markdown, display
+from tabulate import tabulate
+import pickle
+```
+
+```{python}
+student_train = pd.read_csv("../data/processed/student_train.csv")
+
+data_shape = pd.read_csv("../data/raw/student-por.csv", sep=';').shape
+num_obs = data_shape[0]
+num_features = data_shape[1] - 1
+
+train_split = student_train.shape[0] / num_obs
+test_split = pd.read_csv("../data/processed/student_test.csv").shape[0] / num_obs
+
+passing_threshold = 10
+passing_rate = (student_train['G3'] >= passing_threshold).mean()
+failing_rate = (student_train['G3'] < passing_threshold).mean()
+
+best_params = pd.read_csv("../results/models/best_params.csv")
+
+test_scores_df = pd.read_csv("../results/tables/test_scores.csv").round(3)
+
+top_coefficients_df = pd.read_csv("../results/tables/top_coefficients.csv").round(3)
+top_coefficients_df = top_coefficients_df.rename(columns={"Unnamed: 0": "Feature"})
+```
+
+# Summary
+
+We built a linear regression model utilizing Ridge Regression to predict a student's final grade (G3) in a Portuguese language course using demographic data, behavioural insights, and previous assessment scores. Our final model achieved strong performance on unseen test data, with an R² score of `{python} test_scores_df['R2'][0]` and a Mean Absolute Error (MAE) of `{python} test_scores_df['MAE'][0]`. On average, model predictions deviated from actual grades by less than one grade point on the 0-20 scale, indicating a high level of accuracy. Although the model demonstrated reliability in predicting grades within the passing range (scores exceeding 8), residual analysis revealed reduced precision for students with lower scores or those receiving a zero, frequently overestimating their performance. Given this limitation concerning failing students, we conclude that this model showcases adequate performance to serve as a decision-support tool for educators to project final grades midway through the term.
+
+# Introduction
+
+Student academic success is influenced by a complex combination of personal, social, and educational factors. Understanding the determinants of performance and being able to reliably predict student outcomes has important implications for supporting learning, designing interventions, and improving educational strategies [@Ma2000; @Pritchard2003]. Despite decades of pedagogical research, identifying at-risk students early remains challenging because performance is shaped by many interacting variables such as family background, study habits, school engagement, and socio-economic conditions.
+
+Here we ask whether a machine learning algorithm can predict a student's final grade based on their demographic attributes, family characteristics, school-related behaviours, and past academic performance. Answering this question is valuable because traditional methods of assessing student progress often rely on subjective teacher evaluations or mid-course assessments, which may miss early warning signs or overlook external factors influencing learning [@Johora2025]. If a machine learning model can accurately and consistently predict final grades, this could help educators identify students in need of additional support earlier, design more targeted interventions, and ultimately contribute to improved educational outcomes.
+
+# Methods
+
+## Data
+
+The data set used in this project is the Student Performance dataset created by Paulo Cortez from the University of Minho, Portugal [@Cortez2008]. It was sourced from the UCI Machine Learning Repository [@CortezUCI] and can be found [here](https://archive.ics.uci.edu/dataset/320/student+performance). The dataset contains information on `{python} num_obs` students from two Portuguese secondary schools, with data collected through school reports and questionnaires. Each row represents a student with `{python} num_features` features including demographic information (age, sex, family size), educational background (parental education, past failures, study time), social factors (going out, romantic relationships, alcohol consumption), and school-related features (absences, extra support, desire for higher education). The dataset also includes grades from the first period (G1), second period (G2), and final grade (G3), with G3 serving as the target variable for prediction.
+
+## Analysis
+
+A linear regression model with Ridge regularization was used to predict the final grade (G3). All available features from the dataset were utilized, including student demographics, family background, and prior assessment scores (G1 and G2). Data was split with `{python} f"{train_split:.0%}"` into the training set and `{python} f"{test_split:.0%}"` into the test set. The hyperparameter alpha was tuned using 10-fold cross-validation with Randomized Search, selecting Mean Absolute Error (MAE) as the evaluation metric to prioritize interpretability and robustness against outliers. Preprocessing involved standardizing numeric features—applying Robust Scaler specifically to skewed distributions like absences—and transforming categorical variables via One-Hot Encoding. The Python programming language [@Python] and the following Python packages were used to perform the analysis: Pandas [@pandas], NumPy [@numpy], Altair [@altair], and scikit-learn [@scikit-learn]. The code used to perform the analysis and create this report can be found here: <https://github.com/jiroamato/student_grade_predictor>.
+
+# Results & Discussion
+
+To understand the predictive power of our features, we examined correlations between all predictors and the target variable (@fig-correlation-heatmap). Prior assessment grades (G1 and G2) showed the strongest correlation with final grades, which aligns with educational research suggesting past performance is the most reliable predictor of future outcomes. Other notable correlations included study time and parental education levels, though these effects were considerably smaller.
+
+![Pairwise correlations between all features in the dataset.](../results/figures/correlation_heatmap.png){#fig-correlation-heatmap width=90%}
+
+We also examined the distribution of our target variable to understand the grade landscape (@fig-target-distribution). The distribution showed that `{python} f"{passing_rate:.0%}"` of students achieved passing grades (10 or above), while `{python} f"{failing_rate:.0%}"` fell below the passing threshold. This imbalance is important context for interpreting model performance, particularly regarding predictions for lower-performing students.
+
+![Distribution of the target variable (G3) showing final grade frequencies.](../results/figures/target_distribution.png){#fig-target-distribution width=70%}
+
+To optimize model performance, we tuned the regularization parameter alpha using 10-fold cross-validation (@fig-alpha). The optimal alpha value was found to be `{python} f"{best_params['best_alpha'][0]:.3f}"`, which balanced the trade-off between model complexity and generalization ability while yielding the minimum MAE of `{python} test_scores_df['MAE'][0]`.
+
+![Hyperparameter Tuning of Alpha.](../results/figures/student_tune_alpha.png){#fig-alpha width=70%}
+
+Our prediction model performed well on test data, achieving a final R² of `{python} test_scores_df['R2'][0]` and MAE of `{python} test_scores_df['MAE'][0]` (@tbl-test-scores). The R² indicates that our model explains approximately `{python} f"{test_scores_df['R2'][0]:.0%}"` of the variance in student final grades, while the MAE confirms predictions are accurate to within less than one grade point on average.
+
+```{python}
+#| label: tbl-test-scores
+#| tbl-cap: Model performance metrics on test data.
+
+Markdown(test_scores_df.to_markdown(index=False))
+```
+
+To better understand prediction accuracy across the grade spectrum, we examined residuals (prediction errors) against predicted values (@fig-residuals). The model performs well for students predicted to score 8 or above, with errors distributed evenly around zero. However, for students with lower actual grades, particularly those receiving zeros, the model consistently overestimates performance. This pattern suggests that the factors leading to very poor academic outcomes may not be fully captured by the features in our dataset.
+
+![Residual analysis showing prediction errors across the range of predicted values.](../results/figures/prediction_error.png){#fig-residuals width=60%}
+
+Examination of model coefficients revealed that G2 and G1 (second and first period grades) were by far the strongest predictors of final grades (@tbl-top-coefficients). This finding is intuitive—students who perform well early in the term tend to continue performing well. Among other features, past failures contributed the most negatively to predicted grades, while study time and parental education showed modest positive effects.
+
+{{< pagebreak >}}
+```{python}
+#| label: tbl-top-coefficients
+#| tbl-cap: Top 5 model coefficients by magnitude.
+
+Markdown(top_coefficients_df.to_markdown(index=False))
+```
+
+The strong performance of this model suggests it could serve as a useful decision-support tool for educators. By inputting early assessment scores and student characteristics, teachers could identify students at risk of poor final outcomes and implement targeted interventions. However, the model's reduced accuracy for failing students represents a significant limitation. Students most in need of early intervention are precisely those for whom predictions are least reliable.
+
+Several directions could be explored to improve the model further. First, additional features capturing engagement metrics (such as assignment completion rates or class participation) might help predict performance for at-risk students. Second, a model excluding G1 and G2 features could be valuable for even earlier prediction—before any formal assessments occur—though this would likely come at the cost of accuracy. Finally, exploring non-linear models such as random forests or gradient boosting might capture complex interactions between features that linear regression cannot represent.
+
+# References
