@@ -136,12 +136,52 @@ def main(training_data, preprocessor, pipeline_to, plot_to, seed):
         .drop(columns=["std_test_score"])
     )
 
-    line_n_point = alt.Chart(accuracies_grid, width=600).mark_line(color="black").encode(
-        x=alt.X("alpha:Q", scale=alt.Scale(type='log')).title("Alpha (log scale)"),
-        y=alt.Y("neg_mae:Q").scale(zero=False).title("Mean Absolute Error")
+    # 2. Prepare the best point for the highlight layer
+    # We use the variables best_alpha and best_score you calculated earlier
+    best_point_df = pd.DataFrame({
+        'alpha': [best_alpha],
+        'neg_mae': [best_score],
+        'label': [f"Alpha: {best_alpha:.3f} | MAE: {best_score:.3f}"]
+    })
+
+    # 3. Base Chart (The line and all points)
+    base = alt.Chart(accuracies_grid, width=600).encode(
+        x=alt.X("alpha:Q", scale=alt.Scale(type='log'), title="Alpha (log scale)"),
+        y=alt.Y("neg_mae:Q", scale=alt.Scale(zero=False), title="Mean Absolute Error")
     )
 
-    plot = line_n_point + line_n_point.mark_circle(color='black')
+    line = base.mark_line(color="black")
+    points = base.mark_circle(color="black", size=30, opacity=0.75)
+
+    # 4. Highlight Layer (Red circle for the best point)
+    best_point = alt.Chart(best_point_df).mark_circle(
+        color="firebrick", 
+        size=60,
+        opacity=1
+    ).encode(
+        x="alpha:Q",
+        y="neg_mae:Q"
+    )
+
+    # 5. Text Annotation Layer 
+    best_text = alt.Chart(best_point_df).mark_text(
+        align='left', 
+        dx=-115,        
+        dy=-25,       
+        fontWeight='bold',
+        fontSize=13,
+        color='firebrick'
+    ).encode(
+        x="alpha:Q",
+        y="neg_mae:Q",
+        text="label:N" 
+    )
+
+    # Combine all layers and add the title
+    plot = (line + points + best_point + best_text).properties(
+        title="Hyperparameter Tuning Results: Optimal Alpha for Ridge Regression"
+    )
+
     plot.save(os.path.join(plot_to, "student_tune_alpha.png"), scale_factor=2.0)
     print(f"Saved tuning plot to {plot_to}/student_tune_alpha.png")
 
