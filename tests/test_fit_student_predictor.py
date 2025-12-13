@@ -1,8 +1,10 @@
 import pytest
 import pandas as pd
 import numpy as np
+from pathlib import Path
 from click.testing import CliRunner
 from unittest.mock import MagicMock, mock_open
+from pytest_mock import MockerFixture
 
 from src.fit_student_predictor import main
 
@@ -10,7 +12,7 @@ from src.fit_student_predictor import main
 class TestMain:
     """Tests for the model fitting main function."""
 
-    def test_main_reads_training_csv(self, mocker, tmp_path, sample_train_df, mock_preprocessor):
+    def test_main_reads_training_csv(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame, mock_preprocessor: MagicMock) -> None:
         """
         Test that main() reads the training CSV from correct path.
 
@@ -80,7 +82,7 @@ class TestMain:
 
         mock_read_csv.assert_called_once()
 
-    def test_main_loads_preprocessor_pickle(self, mocker, tmp_path, sample_train_df, mock_preprocessor):
+    def test_main_loads_preprocessor_pickle(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame, mock_preprocessor: MagicMock) -> None:
         """
         Test that main() loads the preprocessor from pickle file.
         """
@@ -139,7 +141,7 @@ class TestMain:
 
         mock_pickle_load.assert_called_once()
 
-    def test_main_saves_pipeline_pickle(self, mocker, tmp_path, sample_train_df, mock_preprocessor):
+    def test_main_saves_pipeline_pickle(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame, mock_preprocessor: MagicMock) -> None:
         """
         Test that main() saves the fitted pipeline as a pickle file.
         """
@@ -196,8 +198,8 @@ class TestMain:
         assert (pipeline_dir / "student_pipeline.pickle").exists()
 
     def test_main_raises_error_on_failed_correlation_check(
-        self, mocker, tmp_path, sample_train_df, mock_preprocessor
-    ):
+        self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame, mock_preprocessor: MagicMock
+    ) -> None:
         """
         Test that main() raises ValueError when correlation checks fail.
         """

@@ -25,7 +25,7 @@ TARGET = "G3"
 @click.option('--pipeline-to', type=str, help="Path to directory where the pipeline object will be written to")
 @click.option('--plot-to', type=str, help="Path to directory where the plot will be written to")
 @click.option('--seed', type=int, help="Random seed", default=123)
-def main(training_data, preprocessor, pipeline_to, plot_to, seed):
+def main(training_data: str, preprocessor: str, pipeline_to: str, plot_to: str, seed: int) -> None:
     """
     Fit a Ridge regression model to the training data and save the pipeline.
 

@@ -6,7 +6,7 @@ import numpy as np
 from unittest.mock import MagicMock
 
 @pytest.fixture
-def sample_train_df():
+def sample_train_df() -> pd.DataFrame:
     """
     Create a sample training DataFrame for testing EDA and model scripts.
 
@@ -53,7 +53,7 @@ def sample_train_df():
 
 
 @pytest.fixture
-def sample_test_df():
+def sample_test_df() -> pd.DataFrame:
     """
     Create a sample test DataFrame for testing model evaluation.
 
@@ -99,7 +99,7 @@ def sample_test_df():
     })
 
 @pytest.fixture
-def sample_raw_df():
+def sample_raw_df() -> pd.DataFrame:
     """
     Create a sample raw DataFrame for testing preprocess_data.
 
@@ -145,7 +145,7 @@ def sample_raw_df():
     })
 
 @pytest.fixture
-def mock_preprocessor():
+def mock_preprocessor() -> MagicMock:
     """
     Create a mock preprocessor for testing model fitting.
 
@@ -164,7 +164,7 @@ def mock_preprocessor():
     return mock
   
 @pytest.fixture
-def mock_pipeline():
+def mock_pipeline() -> MagicMock:
     """
     Create a mock pipeline for testing model evaluation.
 
@@ -200,7 +200,7 @@ def mock_pipeline():
     return mock
 
 @pytest.fixture
-def mock_zip_content():
+def mock_zip_content() -> bytes:
     """
     Create a mock zip file containing a nested student.zip with CSV files.
 

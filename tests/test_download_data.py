@@ -2,7 +2,9 @@ import pytest
 import os
 import io
 import zipfile
+from pathlib import Path
 from click.testing import CliRunner
+from pytest_mock import MockerFixture
 
 from src.download_data import read_zip, main
 
@@ -15,8 +17,8 @@ class TestReadZip:
         (500, "URL provided does not exist"),
     ])
     def test_read_zip_raises_error_for_bad_http_status(
-        self, mocker, tmp_path, status_code, expected_error
-    ):
+        self, mocker: MockerFixture, tmp_path: Path, status_code: int, expected_error: str
+    ) -> None:
         """
         Test that read_zip raises ValueError for non-200 HTTP responses.
 
@@ -37,7 +39,7 @@ class TestReadZip:
         with pytest.raises(ValueError, match=expected_error):
             read_zip("http://example.com/data.zip", str(tmp_path))
 
-    def test_read_zip_raises_error_for_non_zip_url(self, tmp_path):
+    def test_read_zip_raises_error_for_non_zip_url(self, tmp_path: Path) -> None:
         """
         Test that read_zip raises ValueError when URL doesn't point to a zip file.
 
@@ -49,12 +51,12 @@ class TestReadZip:
         with pytest.raises(ValueError, match="does not point to a zip file"):
             read_zip("http://example.com/file.txt", str(tmp_path))
 
-    def test_read_zip_raises_error_for_nonexistent_directory(self):
+    def test_read_zip_raises_error_for_nonexistent_directory(self) -> None:
         """Test that read_zip raises ValueError when directory doesn't exist."""
         with pytest.raises(ValueError, match="directory provided does not exist"):
             read_zip("http://example.com/data.zip", "/nonexistent/path")
 
-    def test_read_zip_extracts_files_successfully(self, mocker, tmp_path, mock_zip_content):
+    def test_read_zip_extracts_files_successfully(self, mocker: MockerFixture, tmp_path: Path, mock_zip_content: bytes) -> None:
         """
         Test that read_zip successfully extracts files from a valid zip.
 
@@ -79,7 +81,7 @@ class TestReadZip:
 class TestMain:
     """Tests for the CLI main function."""
 
-    def test_main_calls_read_zip_with_correct_arguments(self, mocker, tmp_path):
+    def test_main_calls_read_zip_with_correct_arguments(self, mocker: MockerFixture, tmp_path: Path) -> None:
         """
         Test that main() passes correct arguments to read_zip.
 
@@ -104,7 +106,7 @@ class TestMain:
             str(tmp_path)
         )
 
-    def test_main_creates_output_directory_if_missing(self, mocker, tmp_path, mock_zip_content):
+    def test_main_creates_output_directory_if_missing(self, mocker: MockerFixture, tmp_path: Path, mock_zip_content: bytes) -> None:
         """
         Test that main() creates the output directory if it doesn't exist.
 

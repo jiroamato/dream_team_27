@@ -1,8 +1,10 @@
 import pytest
 import pandas as pd
 import numpy as np
+from pathlib import Path
 from click.testing import CliRunner
 from unittest.mock import MagicMock, mock_open
+from pytest_mock import MockerFixture
 
 from src.evaluate_student_predictor import main
 
@@ -10,7 +12,7 @@ from src.evaluate_student_predictor import main
 class TestMain:
     """Tests for the model evaluation main function."""
 
-    def test_main_reads_test_csv(self, mocker, tmp_path, sample_test_df, mock_pipeline):
+    def test_main_reads_test_csv(self, mocker: MockerFixture, tmp_path: Path, sample_test_df: pd.DataFrame, mock_pipeline: MagicMock) -> None:
         """
         Test that main() reads the test CSV from correct path.
         """
@@ -38,7 +40,7 @@ class TestMain:
         mock_read_csv.assert_called_once()
         assert 'student_test.csv' in str(mock_read_csv.call_args)
 
-    def test_main_loads_pipeline_pickle(self, mocker, tmp_path, sample_test_df, mock_pipeline):
+    def test_main_loads_pipeline_pickle(self, mocker: MockerFixture, tmp_path: Path, sample_test_df: pd.DataFrame, mock_pipeline: MagicMock) -> None:
         """
         Test that main() loads the fitted pipeline from pickle file.
         """
@@ -65,7 +67,7 @@ class TestMain:
 
         mock_pickle_load.assert_called_once()
 
-    def test_main_calls_predict_on_pipeline(self, mocker, tmp_path, sample_test_df, mock_pipeline):
+    def test_main_calls_predict_on_pipeline(self, mocker: MockerFixture, tmp_path: Path, sample_test_df: pd.DataFrame, mock_pipeline: MagicMock) -> None:
         """
         Test that main() calls predict on the loaded pipeline.
         """
@@ -96,7 +98,7 @@ class TestMain:
     "test_scores.csv",
     "top_coefficients.csv",
     ])
-    def test_main_saves_output_files(self, mocker, tmp_path, sample_test_df, mock_pipeline, output_file):
+    def test_main_saves_output_files(self, mocker: MockerFixture, tmp_path: Path, sample_test_df: pd.DataFrame, mock_pipeline: MagicMock, output_file: str) -> None:
         """
         Test that main() saves the expected output CSV files.
         """
@@ -146,7 +148,7 @@ class TestMain:
             f"Expected {output_file} to be saved. Saved: {to_csv_calls}"
 
 
-    def test_main_saves_prediction_error_plot(self, mocker, tmp_path, sample_test_df, mock_pipeline):
+    def test_main_saves_prediction_error_plot(self, mocker: MockerFixture, tmp_path: Path, sample_test_df: pd.DataFrame, mock_pipeline: MagicMock) -> None:
         """
         Test that main() saves the prediction error plot.
         """

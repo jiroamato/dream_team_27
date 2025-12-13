@@ -7,7 +7,7 @@ from io import BytesIO
 from zipfile import ZipFile
 
 
-def read_zip(url, directory):
+def read_zip(url: str, directory: str) -> None:
     """
     Download and extract a zip file from a URL to a local directory.
 
@@ -83,7 +83,7 @@ def read_zip(url, directory):
 @click.command()
 @click.option('--url', type=str, help="URL of dataset to be downloaded")
 @click.option('--write-to', type=str, help="Path to directory where raw data will be written to")
-def main(url, write_to):
+def main(url: str, write_to: str) -> None:
     """Download data zip from the web and extract it to a local directory."""
     try:
         read_zip(url, write_to)

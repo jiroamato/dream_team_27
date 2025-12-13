@@ -7,10 +7,10 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn import set_config
 from sklearn.preprocessing import StandardScaler, RobustScaler, OneHotEncoder
-from sklearn.compose import make_column_transformer
+from sklearn.compose import make_column_transformer, ColumnTransformer
 
 
-def create_schema():
+def create_schema() -> pa.DataFrameSchema:
     """
     Create and return the pandera validation schema for student data.
 
@@ -76,7 +76,7 @@ def create_schema():
     return schema
 
 
-def create_preprocessor():
+def create_preprocessor() -> ColumnTransformer:
     """
     Create a column transformer for preprocessing student features.
 
@@ -126,7 +126,7 @@ def create_preprocessor():
 @click.option('--data-to', type=str, help="Path to directory where processed data will be written to")
 @click.option('--preprocessor-to', type=str, help="Path to directory where the preprocessor object will be written to")
 @click.option('--seed', type=int, help="Random seed", default=123)
-def main(raw_data, data_to, preprocessor_to, seed):
+def main(raw_data: str, data_to: str, preprocessor_to: str, seed: int) -> None:
     """
     Validate, split, and preprocess the student performance data.
 

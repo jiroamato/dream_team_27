@@ -22,7 +22,7 @@ TARGET = "G3"
 @click.option('--tables-to', type=str, help="Path to directory where table results will be written to")
 @click.option('--plot-to', type=str, help="Path to directory where plots will be written to")
 @click.option('--seed', type=int, help="Random seed", default=123)
-def main(test_data, pipeline_from, tables_to, plot_to, seed):
+def main(test_data: str, pipeline_from: str, tables_to: str, plot_to: str, seed: int) -> None:
     """
     Evaluate the student grade predictor on test data and save results.
 

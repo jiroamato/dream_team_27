@@ -1,7 +1,9 @@
 import pytest
 import pandas as pd
+from pathlib import Path
 from click.testing import CliRunner
 from unittest.mock import MagicMock
+from pytest_mock import MockerFixture
 
 from src.eda import main
 
@@ -9,7 +11,7 @@ from src.eda import main
 class TestMain:
     """Tests for the EDA main function."""
 
-    def test_main_reads_csv_with_correct_path(self, mocker, tmp_path, sample_train_df):
+    def test_main_reads_csv_with_correct_path(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame) -> None:
         """
         Test that main() reads the processed training CSV from correct path.
 
@@ -56,7 +58,7 @@ class TestMain:
         "target_distribution.png",
         "correlation_heatmap.png",
     ])
-    def test_main_saves_expected_plots(self, mocker, tmp_path, sample_train_df, expected_plot):
+    def test_main_saves_expected_plots(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame, expected_plot: str) -> None:
         """
         Test that main() saves the expected plot files.
 
@@ -107,7 +109,7 @@ class TestMain:
         assert any(expected_plot in f for f in saved_files), \
             f"Expected {expected_plot} to be saved. Saved: {saved_files}"
 
-    def test_main_handles_missing_directory(self, mocker, tmp_path, sample_train_df):
+    def test_main_handles_missing_directory(self, mocker: MockerFixture, tmp_path: Path, sample_train_df: pd.DataFrame) -> None:
         """
         Test that main() creates the plot directory if it doesn't exist.
 

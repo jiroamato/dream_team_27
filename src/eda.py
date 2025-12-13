@@ -15,7 +15,7 @@ PASSING_GRADE = 10
 @click.command()
 @click.option('--processed-training-data', type=str, help="Path to processed training data")
 @click.option('--plot-to', type=str, help="Path to directory where the plots will be written to")
-def main(processed_training_data, plot_to):
+def main(processed_training_data: str, plot_to: str) -> None:
     """
     Generate exploratory data analysis visualizations for student data.
 

@@ -1,7 +1,9 @@
 import pytest
 import pandas as pd
 import numpy as np
+from pathlib import Path
 from click.testing import CliRunner
+from pytest_mock import MockerFixture
 
 from src.preprocess_data import main
 
@@ -9,7 +11,7 @@ from src.preprocess_data import main
 class TestMain:
     """Tests for the preprocess_data main function."""
 
-    def test_main_reads_csv_with_correct_path(self, mocker, tmp_path, sample_raw_df):
+    def test_main_reads_csv_with_correct_path(self, mocker: MockerFixture, tmp_path: Path, sample_raw_df: pd.DataFrame) -> None:
         """
         Test that main() reads the CSV file from the correct path.
 
@@ -42,7 +44,7 @@ class TestMain:
         mock_read_csv.assert_called_once()
         assert 'student-por.csv' in str(mock_read_csv.call_args)
 
-    def test_main_saves_preprocessor_as_pickle(self, mocker, tmp_path, sample_raw_df):
+    def test_main_saves_preprocessor_as_pickle(self, mocker: MockerFixture, tmp_path: Path, sample_raw_df: pd.DataFrame) -> None:
         """
         Test that main() saves the preprocessor as a pickle file.
 
@@ -80,7 +82,7 @@ class TestMain:
         "student_train.csv",
         "student_test.csv",
     ])
-    def test_main_saves_train_test_splits(self, mocker, tmp_path, sample_raw_df, output_file):
+    def test_main_saves_train_test_splits(self, mocker: MockerFixture, tmp_path: Path, sample_raw_df: pd.DataFrame, output_file: str) -> None:
         """
         Test that main() saves train and test CSV files.
 
@@ -115,7 +117,7 @@ class TestMain:
         # Check to_csv was called multiple times (train and test files)
         assert mock_to_csv.call_count >= 2
 
-    def test_main_uses_seed_for_reproducibility(self, mocker, tmp_path, sample_raw_df):
+    def test_main_uses_seed_for_reproducibility(self, mocker: MockerFixture, tmp_path: Path, sample_raw_df: pd.DataFrame) -> None:
         """
         Test that main() uses the seed for reproducible train/test splits.
 
